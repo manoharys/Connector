@@ -44,6 +44,20 @@
     $data = date("Y-m-d");
 
     echo "$fname $lname ";
+    
+    if($email == $email2) {
+        //checking it is valid email...(.com)
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+        }
+        else{
+            echo "invalid email";
+        }
+    }
+    else {
+        echo "Email donnot match";
+    }
+
 }
 
 ?>
