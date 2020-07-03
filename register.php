@@ -44,7 +44,15 @@
     $data = date("Y-m-d");
 
     echo "$fname $lname ";
-    
+   
+    if(strlen($fname) > 25 || strlen($fname) < 2){
+        echo "First name should contain characters between 2 and 25";
+    } 
+
+    if(strlen($lname) > 25 || strlen($lname) < 2){
+        echo "Last name should contain characters between 2 and 25";
+    } 
+
     if($email == $email2) {
         //checking it is valid email...(.com)
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -66,8 +74,20 @@
     else {
         echo "Email donnot match";
     }
+    
+    if($password != $password2){
+        echo "password do not match";
+    }
+    else {
+        if(preg_match('/[^A-Za-z0-9]/', $password)) {
+           echo "Your password can only contain characters or numbers";
+        }
+    }
+    if(strlen($password) > 25 || strlen($password) < 5){
+        echo "Your password must be between 5 and 15";
+    }
 
-}
+  }
 
 ?>
 
