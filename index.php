@@ -18,16 +18,9 @@
     <title>CONNECTOR</title>
 </head>
 <body>
-    <h2>registration</h2>
+  hello
 
-     <form action="index.php" method="post">
-       <label for="username">Username:</label>
-       <input type="text" name="username">
-       <br>
-       <label for="email">Email:</label>
-       <input type="email" name="email"><br>
-       <input type="submit">
-     </form>
+    
 
 </body>
 </html>
