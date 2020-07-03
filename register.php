@@ -49,6 +49,15 @@
         //checking it is valid email...(.com)
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+
+            $email_check = mysqli_query($con, "SELECT email from users where email = '$email'");
+
+            $email_count = mysqli_num_rows($email_check);
+
+            if($email_count > 0){
+               echo "Email already in use";
+            }
+            
         }
         else{
             echo "invalid email";
