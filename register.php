@@ -15,7 +15,7 @@
   $password = "";
   $password2 = "";
   $data = ""; //Sign up date
-  $error_array = "";//holds error message 
+  $error_array = array();//holds error message 
 
   if(isset($_POST["submit_btn"])){
    //Registration form values
@@ -50,12 +50,11 @@
     echo "$fname $lname ";
    
     if(strlen($fname) > 25 || strlen($fname) < 2){
-        echo "First name should contain characters between 2 and 25";
-      
+        array_push($error_array, "First name should contain characters between 2 and 25");
     } 
 
     if(strlen($lname) > 25 || strlen($lname) < 2){
-        echo "Last name should contain characters between 2 and 25";
+        array_push($error_array, "Last name should contain characters between 2 and 25");
     } 
 
     if($email == $email2) {
@@ -68,28 +67,29 @@
             $email_count = mysqli_num_rows($email_check);
 
             if($email_count > 0){
-               echo "Email already in use";
+                array_push($error_array, "Email already in use");
+             
             }
             
         }
         else{
-            echo "invalid email";
+            array_push($error_array, "invalid email");
         }
     }
     else {
-        echo "Email donnot match";
+        array_push($error_array, "Email donnot match");
     }
     
     if($password != $password2){
-        echo "password do not match";
+        array_push($error_array, "password do not match");
     }
     else {
         if(preg_match('/[^A-Za-z0-9]/', $password)) {
-           echo "Your password can only contain characters or numbers";
+        array_push($error_array, "Your password can only contain characters or numbers");
         }
     }
     if(strlen($password) > 25 || strlen($password) < 5){
-        echo "Your password must be between 5 and 15";
+        array_push($error_array, "Your password must be between 5 and 15");
     }
 
   }
