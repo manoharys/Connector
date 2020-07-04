@@ -103,15 +103,23 @@
      /*Generating unique username
        if username = manohar is already present then 
           username = manohar_1 and so on */
-          
+
         while($check_username_exits != 0){
             $i++;
             $username .= "_" . $i;
             $check_username_exits = mysqli_query($con, "SELECT username from users WHERE username = '$username'");
         }
 
+    //Generating random profile picture
+        $rand = rand(1, 2);
+        
+       if($rand == 1){ 
+         $profile_pic = "assests/images/profile_pic/head_deep_blue.png";
+       }
+       else if($rand == 2){
+         $profile_pic = "assests/images/profile_pic/head_emerald.png";
+       } 
    }
-
   }
 
 ?>
