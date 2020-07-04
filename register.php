@@ -96,7 +96,7 @@
    //inserting into the database
    if(empty($error_array)){
         $password = md5($password); //encrypting password before sending into the database
-        $username = $fname. "_" . "$lname";
+        $username = strtolower($fname. "_" . $lname);
         $check_username_exits = mysqli_query($con, "SELECT username from users WHERE username = '$username'");
 
         $i = 0;
@@ -104,7 +104,7 @@
        if username = manohar is already present then 
           username = manohar_1 and so on */
 
-        while($check_username_exits != 0){
+        while(mysqli_num_rows($check_username_exits) != 0){
             $i++;
             $username .= "_" . $i;
             $check_username_exits = mysqli_query($con, "SELECT username from users WHERE username = '$username'");
@@ -119,6 +119,8 @@
        else if($rand == 2){
          $profile_pic = "assests/images/profile_pic/head_emerald.png";
        } 
+     //insert to the database
+     $query = mysqli_query($con, "INSERT INTO users VALUES('', '$fname', '$lname', '$username', '$email', '$password', '$data', '$profile_pic', '0', '0', 'no', ',')");  
    }
   }
 
