@@ -91,6 +91,26 @@
     if(strlen($password) > 25 || strlen($password) < 5){
         array_push($error_array, "Your password must be between 5 and 15");
     }
+  
+
+   //inserting into the database
+   if(empty($error_array)){
+        $password = md5($password); //encrypting password before sending into the database
+        $username = $fname. "_" . "$lname";
+        $check_username_exits = mysqli_query($con, "SELECT username from users WHERE username = '$username'");
+
+        $i = 0;
+     /*Generating unique username
+       if username = manohar is already present then 
+          username = manohar_1 and so on */
+          
+        while($check_username_exits != 0){
+            $i++;
+            $username .= "_" . $i;
+            $check_username_exits = mysqli_query($con, "SELECT username from users WHERE username = '$username'");
+        }
+
+   }
 
   }
 
