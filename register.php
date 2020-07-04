@@ -39,6 +39,7 @@
 
    $email2 = strip_tags($_POST["reg_email2"]);
    $email2 = str_replace(' ', '', $email2); //remove spaces
+   $_SESSION['reg_email2'] = $email2;
   
    //password
     $password = strip_tags($_POST["reg_password"]);
@@ -121,7 +122,15 @@
        } 
      //insert to the database
      $query = mysqli_query($con, "INSERT INTO users VALUES('', '$fname', '$lname', '$username', '$email', '$password', '$data', '$profile_pic', '0', '0', 'no', ',')");  
-   }
+   
+    array_push($error_array, "<span style = 'color:green';> Successfully registered go ahead and login</span>");
+
+    //clearing session variables
+     $_SESSION['reg_fname'] = "";
+     $_SESSION['reg_lname'] = "";
+     $_SESSION['reg_email'] = "";
+     $_SESSION['reg_email2'] = "";
+    }
   }
 
 ?>
@@ -187,6 +196,11 @@
        <input type="password" name="reg_password2" placeholder="Confirm password" required>
        <br>
        <input type="submit" name="submit_btn">
+     <?php 
+       if(in_array( "<span style = 'color:green';> Successfully registered go ahead and login</span>", $error_array,)){
+           echo "<span style = 'color:green';> Successfully registered go ahead and login</span>";
+       }
+     ?>
     </form>
 </body>
 </html>
