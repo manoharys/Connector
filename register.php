@@ -2,7 +2,7 @@
   require "config/config.php";
   require "includes/form_handlers/register_handler.php";
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +11,14 @@
     <title>registration</title>
 </head>
 <body>
+   <form action = "register.php" method="POST">
+      <input type="text" name="log_email" placeholder = "Email address">
+      <br>
+      <input type="password" name= "log_password" placeholder = "password">
+      <br>
+      <input type="submit" name="log_button">
+   </form>
+
     <form action="register.php" method="POST">
       <!-- Displaying error message -->
       <?php if(in_array("First name should contain characters between 2 and 25", $error_array)) echo "First name should contain characters between 2 and 25 <br>"; ?>
