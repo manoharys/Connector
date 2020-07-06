@@ -8,14 +8,16 @@
 
      //check database
 
-     $check_database_query = mysqli_query("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
+     $check_database_query = mysqli_query($con, "SELECT * FROM users WHERE email = '$email' and password='$password';");
 
      $is_exists = mysqli_num_rows($check_database_query);
 
      if($is_exists == 1){
          $rows = mysqli_fetch_array($check_database_query);
          $username = rows['username'];
-         $_SESSION['username'] = $username;
+
+         $_SESSION['username'] = $username; //Storing username in session variable 
+         header("Location: index.php");
          exit();
      }
   }
