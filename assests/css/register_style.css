@@ -1,29 +1,44 @@
-form {
-  text-align: center;
-}
-body{
-    margin:0;
-    padding:0;
-    
-}
-.wrapper{
-    background-image: url("../images/backgrounds/desktop.jpg");
-    background-size: 100%;
-    width:100%;
-    height:100vh;
-    min-width: 950px;         
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.register_box{
+form {
+    text-align: center;
+}
+
+.wrapper {
+    background-image: url("../images/backgrounds/desktop.jpg");
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    min-width: 500px;
+}
+
+.register_box {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    width:35%;
-    top:7%;
+    width: 35%;
+    top: 20%;
     background-color: #ffffff;
-    border:1px solid #EDEDED;
+    border: 1px solid #EDEDED;
     border-radius: 8px;
     padding: 5px;
-    opacity: 0.5;
+    opacity: 0.8;
 
+}
+
+.app_header {
+    font-family: 'Kanit', sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color:white;
+    background-color: #58bfc2;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 111px;
+    border-top-left-radius: 161px;
 }

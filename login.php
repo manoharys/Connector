@@ -6,34 +6,42 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="assests/css/register_style.css"> 
+    <link rel="stylesheet" type="text/css" href="assests/css/register_style.css">
 </head>
+
 <body>
-   <div class="wrapper"> 
-      <div class = "register_box">
-        <form action = "login.php" method="POST">
-            <input type="text" name="log_email" placeholder = "Email address" value="
+    <div class="wrapper">
+        <div class="register_box">
+            <div class="app_header">
+                <h1>Connector</h1>
+            </div>
+            <form action="login.php" method="POST">
+                <input type="text" name="log_email" placeholder="Email address" value="
                 <?php
                 if(isset($_SESSION['log_email'])){
                     echo $_SESSION['log_email'];
                 }
                 ?>
-            " required >
-            <br>
-            <input type="password" name= "log_password" placeholder = "password" required>
-            <br>
-            <input type="submit" name="log_button">
-            <?php 
+            " required>
+                <br>
+                <input type="password" name="log_password" placeholder="password" required>
+                <br>
+                <input type="submit" name="log_button">
+                <?php 
                 in_array("Email or Password is incorrect", $error_array);
                 echo "Email or Password is incorrddddddddddddddddddddddddddddddddddddect";
             ?>
-        </form>
-    </div>  
- </div> 
+                <br>
+                <span><a class='redirect' href="login.php">need an accoutn? Sign Up here!</a></span>
+
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
