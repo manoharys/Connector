@@ -1,5 +1,5 @@
 <?php 
-  
+    require "includes/form_handlers/register_handler.php";
   if(isset($_POST["log_button"])){
      $email = filter_var($_POST["log_email"], FILTER_SANITIZE_EMAIL); //Sanitizes email
      $_SESSION["log_email"] = $email;
@@ -19,6 +19,9 @@
          $_SESSION['username'] = $username; //Storing username in session variable 
          header("Location: index.php");
          exit();
+     }
+     else{
+         array_push($error_array, "Email or Password is incorrect");
      }
   }
 ?>
