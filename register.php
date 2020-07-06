@@ -14,6 +14,7 @@
 </head>
 <body>
   <div class="wrapper">
+     <div class = "register_box">
         <form action="register.php" method="POST">
           <!-- Displaying error message -->
           <?php if(in_array("First name should contain characters between 2 and 25", $error_array)) echo "First name should contain characters between 2 and 25 <br>"; ?>
@@ -73,6 +74,7 @@
           }
         ?>
         </form>
+        </div> 
   </div>
 </body>
 </html>

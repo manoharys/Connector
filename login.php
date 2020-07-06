@@ -14,6 +14,7 @@
 </head>
 <body>
    <div class="wrapper"> 
+      <div class = "register_box">
         <form action = "login.php" method="POST">
             <input type="text" name="log_email" placeholder = "Email address" value="
                 <?php
@@ -31,6 +32,7 @@
                 echo "Email or Password is incorrddddddddddddddddddddddddddddddddddddect";
             ?>
         </form>
+    </div>  
  </div> 
 </body>
 
