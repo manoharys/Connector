@@ -13,23 +13,25 @@
     <link rel="stylesheet" type="text/css" href="assests/css/register_style.css"> 
 </head>
 <body>
-   <form action = "login.php" method="POST">
-      <input type="text" name="log_email" placeholder = "Email address" value="
-        <?php
-          if(isset($_SESSION['log_email'])){
-              echo $_SESSION['log_email'];
-          }
-        ?>
-      " required >
-      <br>
-      <input type="password" name= "log_password" placeholder = "password" required>
-      <br>
-      <input type="submit" name="log_button">
-      <?php 
-        in_array("Email or Password is incorrect", $error_array);
-        echo "Email or Password is incorrddddddddddddddddddddddddddddddddddddect";
-      ?>
-   </form>
+   <div class="wrapper"> 
+        <form action = "login.php" method="POST">
+            <input type="text" name="log_email" placeholder = "Email address" value="
+                <?php
+                if(isset($_SESSION['log_email'])){
+                    echo $_SESSION['log_email'];
+                }
+                ?>
+            " required >
+            <br>
+            <input type="password" name= "log_password" placeholder = "password" required>
+            <br>
+            <input type="submit" name="log_button">
+            <?php 
+                in_array("Email or Password is incorrect", $error_array);
+                echo "Email or Password is incorrddddddddddddddddddddddddddddddddddddect";
+            ?>
+        </form>
+ </div> 
 </body>
 
 </html>
