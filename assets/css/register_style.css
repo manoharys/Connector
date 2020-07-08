@@ -96,3 +96,19 @@ input[type="password"]:hover {
 #second {
     display:none;
 }
+#signIn{
+  color:#2b61c5;
+  font-weight: 100;
+  text-decoration: none;
+}
+#signUp{
+ color:#2b61c5;
+ font-weight: 100;
+ text-decoration: none;
+}
+
+.errorDiv{
+  color:red;
+  font-size: 13px;
+  text-align: center;
+}

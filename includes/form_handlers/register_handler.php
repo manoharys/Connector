@@ -1,7 +1,4 @@
 <?php 
-    
-   
-
     //creating variables to avoid errors
     $fname = "";
     $lname = ""; 
@@ -43,7 +40,6 @@
     //date 
     $data = date("Y-m-d");
 
-    echo "$fname $lname ";
     
     if(strlen($fname) > 25 || strlen($fname) < 2){
         array_push($error_array, "First name should contain characters between 2 and 25");
@@ -110,21 +106,22 @@
         $rand = rand(1, 2);
         
         if($rand == 1){ 
-            $profile_pic = "assests/images/profile_pic/head_deep_blue.png";
+            $profile_pic = "assets/images/profile_pic/head_deep_blue.png";
         }
         else if($rand == 2){
-            $profile_pic = "assests/images/profile_pic/head_emerald.png";
+            $profile_pic = "assets/images/profile_pic/head_emerald.png";
         } 
         //insert to the database
         $query = mysqli_query($con, "INSERT INTO users VALUES('', '$fname', '$lname', '$username', '$email', '$password', '$data', '$profile_pic', '0', '0', 'no', ',')");  
-    
-    array_push($error_array, "<span style = 'color:green';> Successfully registered go ahead and login</span>");
+
 
     //clearing session variables
         $_SESSION['reg_fname'] = "";
         $_SESSION['reg_lname'] = "";
         $_SESSION['reg_email'] = "";
         $_SESSION['reg_email2'] = "";
+
+        header("Location: index.php");
     }
     }
 
