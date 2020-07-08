@@ -11,7 +11,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>registration</title>
-  <link rel="stylesheet" type="text/css" href="assests/css/register_style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="assets/js/register.js"></script>
 </head>
 
 <body>
@@ -22,6 +24,7 @@
         <div class="sub_heading"><span>connecting the world</span>
         </div>
       </div>
+     <div id = "first"> 
       <form action="login.php" method="POST">
         <input type="text" name="log_email" placeholder="Email address" value="<?php
                 if(isset($_SESSION['log_email'])){
@@ -38,9 +41,11 @@
                   echo "Email or Password is incorrect";
               ?>
         <br>
-        <span><a class='redirect' href="login.php">need an accoutn? Sign Up here!</a></span>
+        <span><a id='signUp' href="#">need an accoutn? Sign Up here!</a></span>
 
       </form>
+     </div>
+     <div id = "second"> 
       <form action="register.php" method="POST">
         <!-- Displaying error message -->
         <?php if(in_array("First name should contain characters between 2 and 25", $error_array)) echo "First name should contain characters between 2 and 25 <br>"; ?>
@@ -95,9 +100,9 @@
 
         <br>
 
-        <span><a class='redirect' href="login.php">Already have an account? Sign in here!</a></span>
+        <span><a id='signIn' href="#">Already have an account? Sign in here!</a></span>
       </form>
-
+      </div>
     </div>
   </div>
 </body>
