@@ -18,11 +18,10 @@
     <div class="wrapper">
         <div class="register_box">
             <div class="app_header">
-                <h1>Connector</h1>
+           <div>CONNECTOR  <br></div>
             </div>
             <form action="login.php" method="POST">
-                <input type="text" name="log_email" placeholder="Email address" value="
-                <?php
+                <input type="text" name="log_email" placeholder="Email address" value="<?php
                 if(isset($_SESSION['log_email'])){
                     echo $_SESSION['log_email'];
                 }
@@ -33,9 +32,9 @@
                 <br>
                 <input type="submit" name="log_button">
                 <?php 
-                in_array("Email or Password is incorrect", $error_array);
-                echo "Email or Password is incorrddddddddddddddddddddddddddddddddddddect";
-            ?>
+               if(in_array("Email or Password is incorrect", $error_array))
+                  echo "Email or Password is incorrect";
+              ?>
                 <br>
                 <span><a class='redirect' href="login.php">need an accoutn? Sign Up here!</a></span>
 

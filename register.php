@@ -18,8 +18,29 @@
   <div class="wrapper">
     <div class="register_box">
       <div class="app_header">
-        <h1>Connector</h1>
+        <span> <span id="firstLetter">C</span>ONNECTOR</span>
+        <div class="sub_heading"><span>connecting the world</span>
+        </div>
       </div>
+      <form action="login.php" method="POST">
+        <input type="text" name="log_email" placeholder="Email address" value="<?php
+                if(isset($_SESSION['log_email'])){
+                    echo $_SESSION['log_email'];
+                }
+                ?>"
+             required>
+        <br>
+        <input type="password" name="log_password" placeholder="password" required>
+        <br>
+        <input type="submit" name="log_button">
+        <?php 
+               if(in_array("Email or Password is incorrect", $error_array))
+                  echo "Email or Password is incorrect";
+              ?>
+        <br>
+        <span><a class='redirect' href="login.php">need an accoutn? Sign Up here!</a></span>
+
+      </form>
       <form action="register.php" method="POST">
         <!-- Displaying error message -->
         <?php if(in_array("First name should contain characters between 2 and 25", $error_array)) echo "First name should contain characters between 2 and 25 <br>"; ?>

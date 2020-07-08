@@ -1,5 +1,5 @@
 <?php 
-    require "includes/form_handlers/register_handler.php";
+ 
   if(isset($_POST["log_button"])){
      $email = filter_var($_POST["log_email"], FILTER_SANITIZE_EMAIL); //Sanitizes email
      $_SESSION["log_email"] = $email;
