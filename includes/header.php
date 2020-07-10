@@ -30,6 +30,6 @@ else{
 <body>
     <div class="top_bar">
         <div class="logo">
-           <a href="index.php">Connector</a>
+           <a href="index.php"><span>C</span>onnector</a>
         </div>
     </div>

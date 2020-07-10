@@ -44,10 +44,11 @@ form {
   text-align: center;
   font-size: 1.5rem;
   color: #fff;
-  background-color: #2b61c5;
+  background-color: #20aae5;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 111px;
   border-top-left-radius: 161px;
+  text-shadow: #030822 0.5px 0.5px 0px; 
 }
 
 .app_header .sub_heading {
@@ -56,11 +57,11 @@ form {
 }
 .app_header #firstLetter {
   font-weight: bold;
-  color: rgb(129, 143, 0);
+  color: rgb(204, 201, 3);
 }
 
 input[type="submit"] {
-  background: #2b61c5;
+  background-color: #20aae5;
   color: #fff;
   margin: 20px 0px;
   letter-spacing: 1.4px;
@@ -73,7 +74,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover{
-    background:#0e3a8b;
+  background-color: #0e78a5;
 }
 
 input[type="text"],

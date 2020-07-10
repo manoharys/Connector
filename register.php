@@ -12,6 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>registration</title>
   <link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/js/register.js"></script>
 </head>
@@ -32,7 +33,7 @@
     <div class="register_box">
       <div class="app_header">
         <span> <span id="firstLetter">C</span>ONNECTOR</span>
-        <div class="sub_heading"><span>connecting the world</span>
+        <div class="sub_heading"><span>connecting the world!</span>
         </div>
       </div>
      

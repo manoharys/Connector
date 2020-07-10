@@ -1,15 +1,38 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.top_bar{
-    width:100%;
+.top_bar {
+    width: 100%;
     min-width: 1050px;
     height: 40px;
     background-color: #20aae5;
     border-bottom: 0.25em solid #1894ca;
-    margin:0 0 10px 0;
+    margin: 0 0 10px 0;
     display: inline-flex;
+}
+
+.logo a {
+    text-decoration: none;
+    position: relative;
+    font-family: "Special Elite", cursive;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #20aae5; 
+    margin-left: 50px; 
+    text-shadow: #030822 0.5px 0.5px 0px; 
+}
+  
+.logo a span{
+    font-weight: bold;
+    color: rgb(204, 201, 3);
+}
+
+.app_header #firstLetter {
+    font-weight: bold;
+    color: rgb(129, 143, 0);
 }
