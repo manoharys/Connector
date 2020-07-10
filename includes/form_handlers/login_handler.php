@@ -23,7 +23,7 @@
             $reopen_account = mysqli_query($con, "UPDATE users SET user_closed = 'no' WHERE email = '$email'");
          }
 
-         $_SESSION['username'] = $username; //Storing username in session variable 
+         $_SESSION["username"] = $username; //Storing username in session variable 
          header("Location: index.php");
          exit();
      }

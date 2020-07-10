@@ -39,7 +39,7 @@
     
     //date 
     $data = date("Y-m-d");
-
+ 
     
     if(strlen($fname) > 25 || strlen($fname) < 2){
         array_push($error_array, "First name should contain characters between 2 and 25");
@@ -120,7 +120,9 @@
         $_SESSION['reg_lname'] = "";
         $_SESSION['reg_email'] = "";
         $_SESSION['reg_email2'] = "";
-
+    
+        
+        $_SESSION["username"] = $username;
         header("Location: index.php");
     }
     }
