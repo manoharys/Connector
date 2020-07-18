@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+   background-color: #eeeeee;
+}
 
 .top_bar {
     width: 100%;
@@ -13,6 +16,7 @@
     margin: 0 0 10px 0;
     display: inline-flex;
     position: relative;
+    z-index: 10;
 }
 
 .logo a {
@@ -59,4 +63,28 @@ nav a:hover{
    color: #0d455ee5; 
    font-size: bold;
    text-decoration: none;
+}
+
+.wrapper{
+    margin: 0 auto;
+    top: 10px;
+    position: relative;
+    padding: 0 10px;
+    width: 75%;
+    min-width: 950px;
+}
+
+.column{
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 1px #d3d3d3;
+    z-index: -1;
+}
+
+.user_details{
+    width: 250px;
+    float: left;
+    margin-bottom: 20px;
 }
