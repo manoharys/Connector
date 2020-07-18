@@ -7,11 +7,12 @@
 .top_bar {
     width: 100%;
     min-width: 1050px;
-    height: 40px;
+    height: 50px;
     background-color: #20aae5;
     border-bottom: 0.25em solid #1894ca;
     margin: 0 0 10px 0;
     display: inline-flex;
+    position: relative;
 }
 
 .logo a {
@@ -20,13 +21,15 @@
     font-family: "Special Elite", cursive;
     width: 50%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #fff;
     background-color: #20aae5; 
     margin-left: 50px; 
     text-shadow: #030822 0.5px 0.5px 0px; 
+
 }
-  
+
+
 .logo a span{
     font-weight: bold;
     color: rgb(204, 201, 3);
@@ -35,4 +38,25 @@
 .app_header #firstLetter {
     font-weight: bold;
     color: rgb(129, 143, 0);
+}
+
+nav{
+    position: absolute;
+    right:30px;    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+nav a{
+    position: relative;
+    color:#fff;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 40px;
+}
+
+nav a:hover{
+   color: #0d455ee5; 
+   font-size: bold;
+   text-decoration: none;
 }
