@@ -106,10 +106,10 @@
         $rand = rand(1, 2);
         
         if($rand == 1){ 
-            $profile_pic = "assets/images/profile_pic/head_deep_blue.png";
+            $profile_pic = "assets/images/profile_pic/defaults/head_deep_blue.png";
         }
         else if($rand == 2){
-            $profile_pic = "assets/images/profile_pic/head_emerald.png";
+            $profile_pic = "assets/images/profile_pic/defaults/head_emerald.png";
         } 
         //insert to the database
         $query = mysqli_query($con, "INSERT INTO users VALUES('', '$fname', '$lname', '$username', '$email', '$password', '$data', '$profile_pic', '0', '0', 'no', ',')");  
