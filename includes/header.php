@@ -61,6 +61,9 @@ else{
             <a href="#">
                 <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
             </a>
+            <a href="includes/handlers/logout.php">0
+                <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+            </a>
 
         </nav>
 
