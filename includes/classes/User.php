@@ -13,7 +13,9 @@
        return $this->user['username'];
      }
 
-
+     public function getNumPosts(){
+         return $this->user['num_posts'];
+     }
 
       public function getFirstAndLastName(){
         return $this->user['first_name']. " ". $this->user['last_name'];
