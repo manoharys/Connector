@@ -1,125 +1,144 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-   background-color: #eeeeee;
+body {
+  background-color: #eeeeee;
 }
 
 .top_bar {
-    width: 100%;
-    min-width: 1050px;
-    height: 50px;
-    background-color: #20aae5;
-    border-bottom: 0.25em solid #1894ca;
-    margin: 0 0 10px 0;
-    display: inline-flex;
-    position: relative;
-    z-index: 10;
+  width: 100%;
+  min-width: 1050px;
+  height: 50px;
+  background-color: #20aae5;
+  border-bottom: 0.25em solid #1894ca;
+  margin: 0 0 10px 0;
+  display: inline-flex;
+  position: relative;
+  z-index: 10;
 }
 
 .logo a {
-    text-decoration: none;
-    position: relative;
-    font-family: "Special Elite", cursive;
-    width: 50%;
-    text-align: center;
-    font-size: 1.8rem;
-    color: #fff;
-    background-color: #20aae5; 
-    margin-left: 50px; 
-    text-shadow: #030822 0.5px 0.5px 0px; 
-
+  text-decoration: none;
+  position: relative;
+  font-family: "Special Elite", cursive;
+  width: 50%;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #20aae5;
+  margin-left: 50px;
+  text-shadow: #030822 0.5px 0.5px 0px;
 }
 
-
-.logo a span{
-    font-weight: bold;
-    color: rgb(204, 201, 3);
+.logo a span {
+  font-weight: bold;
+  color: rgb(204, 201, 3);
 }
 
 .app_header #firstLetter {
-    font-weight: bold;
-    color: rgb(129, 143, 0);
+  font-weight: bold;
+  color: rgb(129, 143, 0);
 }
 
-nav{
-    position: absolute;
-    right:30px;    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
+nav {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
-nav a{
-    position: relative;
-    color:#fff;
-    text-decoration: none;
-    font-size: 17px;
-    margin-left: 40px;
-}
-
-nav a:hover{
-   color: #0d455ee5; 
-   font-size: bold;
-   text-decoration: none;
+nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 40px;
 }
 
-.wrapper{
-    margin: 0 auto;
-    top: 10px;
-    position: relative;
-    padding: 0 10px;
-    width: 75%;
-    min-width: 950px;
+nav a:hover {
+  color: #0d455ee5;
+  font-size: bold;
+  text-decoration: none;
 }
 
-.column{
-    background-color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 2px 2px 1px #d3d3d3;
-    z-index: -1;
+.wrapper {
+  margin: 0 auto;
+  top: 10px;
+  position: relative;
+  padding: 0 10px;
+  width: 75%;
+  min-width: 950px;
 }
 
-.user_details{
-    width: 250px;
-    float: left;
-    margin-bottom: 20px;
+.column {
+  background-color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 1px #d3d3d3;
+  z-index: -1;
 }
 
-.user_details_left_right{
-    padding:3px;
-    width:125px;
-    display:inline-block;
-    position: absolute;
+.user_details {
+  width: 250px;
+  float: left;
+  margin-bottom: 20px;
 }
 
-.user_details img{
-    padding:5px;
-    border-radius: 50%;
-    height: 150px;
-    width:150px;
+.user_details_left_right {
+  padding: 3px;
+  width: 125px;
+  display: inline-block;
+  position: absolute;
 }
 
-.main_column{
-    float: right;
-    width: 70%;
-    z-index: -1;
-    min-height: 160px;
+.user_details img {
+  padding: 5px;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
 }
 
-.post_form{
-    width: 100;
+.main_column {
+  float: right;
+  width: 70%;
+  z-index: -1;
+  min-height: 160px;
 }
 
-.post_form textarea{
-    width: 80%;
-    height: 60px;
-    border-radius:5px;
-    margin-right: 5px;
-    border: 1px solid #d3d3d3;
-    font-size: 12px;
-    outline: none;
+.post_form {
+  width: 100;
+}
+
+.post_form textarea {
+  width: 80%;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: 1px solid #d3d3d3;
+  font-size: 12px;
+  outline: none;
+  padding: 5px;
+}
+
+.post_form input[type="submit"] {
+  width: 10%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color:#1894ca;
+  color: #fffbfb;
+  font-family: monospace;
+  text-shadow: #1894ca 0.5px 0.5px 0px;
+  font-size: 1.5rem;
+  position: absolute;
+  outline: none;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+.post_form input[type="submit"]:hover{
+    columns: #d3d3d3;
 }
