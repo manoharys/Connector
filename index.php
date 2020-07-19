@@ -19,7 +19,15 @@
           ?>
        </div>
     </div>
-  
+   
+    <div class="main_column column">
+      <form action="index.php" class="post_form" method="POST">
+        <textarea name="post_text" id="post_text" placeholder="Got something to say?"></textarea>
+        <input type="submit" name="post" id="post_botton" value="Post">
+        <hr>
+      </form>
+    </div>
+
 
   </div>
 </body>
