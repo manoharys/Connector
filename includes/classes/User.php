@@ -9,6 +9,12 @@
           $this->user = mysqli_fetch_array($user_details_query);
       }
       
+     public function getUsername(){
+       return $this->user['username'];
+     }
+
+
+
       public function getFirstAndLastName(){
         return $this->user['first_name']. " ". $this->user['last_name'];
       }
