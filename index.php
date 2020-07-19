@@ -1,5 +1,6 @@
 <?php 
    include("includes/header.php");
+   include("includes/classes/User.php");
    $profile_pic =  $user['profile_pic'];
 
 ?>
@@ -27,8 +28,12 @@
         <hr>
       </form>
     </div>
-
-
+    
+    <?php 
+       $userClass = new User($con, $userLoggedIn);
+       echo $userClass->getFirstAndLastName();
+    ?>
+    
   </div>
 </body>
 </html>
