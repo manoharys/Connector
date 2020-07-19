@@ -14,7 +14,7 @@
 
      if($is_exists == 1){
          $rows = mysqli_fetch_array($check_database_query);
-         $username = rows['username'];
+         $username = $rows['username'];
     
         //reopening user account when login
          $userr_closed_query = mysqli_query($con, "SELECT * FROM users WHERE email = '$email' AND user_closed = 'yes'");

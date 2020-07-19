@@ -88,3 +88,18 @@ nav a:hover{
     float: left;
     margin-bottom: 20px;
 }
+
+.user_details_left_right{
+    padding:3px;
+    width:125px;
+    display:inline-block;
+    position: absolute;
+}
+
+.user_details img{
+    padding:5px;
+    border-radius: 50%;
+    height: 150px;
+    width:150px;
+}
+
