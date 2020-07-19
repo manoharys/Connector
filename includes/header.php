@@ -41,7 +41,7 @@ else{
         </div>
         <!-- Navigation bar -->
         <nav>
-            <a href="#">
+            <a href="<?php echo $userLoggedIn?>">
                <?php 
                  echo $user['first_name'];
                ?>
