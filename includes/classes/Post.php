@@ -37,18 +37,32 @@
       }
 
      public function loadPostsFriends(){
-         $str = $row['id'];
-         $body = $row['body'];
-         $added_by = $row['added_by'];
-         $date_time = $row['date_added'];
+         $str = ""; // String to return;
+         $data = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted = 'no' ORDER BY id DESC");
+        
+         while($row = mysqli_fetch_array($data)){
+            $id = $row['id'];
+            $body = $row['body'];
+            $added_by = $row['added_by'];
+            $date_time = $row['date_added'];
 
-         //prepare user_to string so it can be included  even if not posted to a user
-         if($row['user_to'] == "none"){
-             $user_to = "";
-         }else{
-             $user_to_obj = new User($this->con, $row['user_to']);
-             $user_to_name = $user_to_obj->getFirstAndLastName();
-             $user_to = "<a href='". $row['user_to'] . "'>" . $user_to_name . "</a>";
+            //prepare user_to string so it can be included  even if not posted to a user
+            if($row['user_to'] == "none"){
+                $user_to = "";
+            }else{
+                $user_to_obj = new User($this->con, $row['user_to']);
+                $user_to_name = $user_to_obj->getFirstAndLastName();
+                $user_to = "<a href='". $row['user_to'] . "'>" . $user_to_name . "</a>";
+            }
+
+            //check whether the user account closed or not
+            $added_by_obj = new User($this->con, $added_by);
+            if($added_by_obj->isClosed()){
+                continue;
+            }
+            $user_details_query = mysqli_query("SELECT first_name, last_name, profile_pic FROM users
+                                                WHERE username = '$added_by'");
+            $user_row = mysqli_fetch_array($user_details_query);
          }
      } 
    

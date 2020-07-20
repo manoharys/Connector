@@ -20,5 +20,14 @@
       public function getFirstAndLastName(){
         return $this->user['first_name']. " ". $this->user['last_name'];
       }
+
+      public function isClosed(){
+        $query = mysqli_query("SELECT user_closed FROM user WHERE username = $this->user['username']");
+         if(mysqli_fetch_array($query) == "yes"){
+           return true;
+         }else{
+           return false;
+         }
+      }
   }
 ?>
