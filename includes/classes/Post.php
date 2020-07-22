@@ -63,6 +63,20 @@
             $user_details_query = mysqli_query("SELECT first_name, last_name, profile_pic FROM users
                                                 WHERE username = '$added_by'");
             $user_row = mysqli_fetch_array($user_details_query);
+
+
+            //TimeFrame
+            $date_time_now = date("Y-m-d H:i:s");
+            $start_data = new DateTime($date_time); //Time of post
+            $end_date = new DateTime($date_time_now); //Current time
+            $interval = $start_data->diff($end_date); //Difference b/w dates
+            if($interval->y >= 1){
+                if($interval == 1){
+                    $time_message = $interval->y . " year ago"; //1 year ago
+                }else{
+                    $time_message = $interval->y . "years ago"; //1+ year ago
+                }
+            }
          }
      } 
    
