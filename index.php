@@ -37,8 +37,8 @@
     </div>
     
     <?php 
-       $userClass = new User($con, $userLoggedIn);
-       echo $userClass->getFirstAndLastName();
+      $post = new Post($con, $userLoggedIn);
+      $post->loadPostsFriends();
     ?>
     
   </div>

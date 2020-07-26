@@ -5,7 +5,7 @@
 
       public function __construct($con, $users){
           $this->con = $con;
-          $user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username = '$users'");
+          $user_details_query = mysqli_query($this->con, "SELECT * FROM users WHERE username = '$users'");
           $this->user = mysqli_fetch_array($user_details_query);
       }
       
@@ -21,13 +21,17 @@
         return $this->user['first_name']. " ". $this->user['last_name'];
       }
 
-      public function isClosed(){
-        $query = mysqli_query("SELECT user_closed FROM user WHERE username = $this->user['username']");
-         if(mysqli_fetch_array($query) == "yes"){
-           return true;
-         }else{
-           return false;
-         }
-      }
+    
+  
+	public function isClosed() {
+		$username = $this->user['username'];
+		$query = mysqli_query($this->con, "SELECT user_closed FROM users WHERE username='$username'");
+		$row = mysqli_fetch_array($query);
+
+		if($row['user_closed'] == 'yes')
+			return true;
+		else 
+			return false;
+	}
   }
 ?>
