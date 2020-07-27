@@ -142,3 +142,20 @@ nav a:hover {
 .post_form input[type="submit"]:hover{
     columns: #d3d3d3;
 }
+
+.status_post {
+	width: 96%;
+	font-size: 15px;
+	padding: 0px 5px;
+  min-height: 75px;
+
+}
+
+.post_profile_pic {
+	float: left;
+	margin-right: 15px;
+}
+
+.post_profile_pic img {
+	border-radius: 50%;
+}

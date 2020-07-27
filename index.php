@@ -34,13 +34,14 @@
         <input type="submit" name="post" id="post_botton" value="Post">
         <hr>
       </form>
-    </div>
-    
-    <?php 
+      <?php 
       $post = new Post($con, $userLoggedIn);
       $post->loadPostsFriends();
     ?>
     
+    </div>
+    
+ 
   </div>
 </body>
 </html>
