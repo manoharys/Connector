@@ -17,7 +17,7 @@
          <img src="<?php echo $profile_pic?>" alt="">  
        </a>
        <div class="user_details_left_right">
-          <a href="#">
+          <a href="<?php echo $userLoggedIn?>">
             <?php echo $user['first_name'] ." ". $user['last_name'];?>
           </a>
           <br>
@@ -34,13 +34,33 @@
         <input type="submit" name="post" id="post_botton" value="Post">
         <hr>
       </form>
-      <?php 
-      $post = new Post($con, $userLoggedIn);
-      $post->loadPostsFriends();
-    ?>
-    
+     
+      <div class="posts_area"></div>
+      <img src="assets/images/icons/loading.gif" alt="loading" id="loading">
+
     </div>
-    
+     
+    <script>
+      let userLoggedIn = '<?php echo $userLoggedIn; ?>';
+
+      $(document).ready(function() {
+
+        $('#loading').show();
+
+        //Originam ajax request for loading first posts
+        $.ajax({
+          url: "includes/handlers/ajax_load_posts.php",
+          type: "POST",
+          data: "page=1&userLoggedIn=" + userLoggedIn,
+          cache: false,
+
+          success: function(data){
+            $('#loading').hide();
+            $('.posts_area').html(data);
+          }
+        })
+      })
+    </script>
  
   </div>
 </body>

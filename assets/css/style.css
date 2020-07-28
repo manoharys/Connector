@@ -13,10 +13,12 @@ body {
   height: 50px;
   background-color: #20aae5;
   border-bottom: 0.25em solid #1894ca;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px 0px;
   display: inline-flex;
   position: relative;
   z-index: 10;
+  position:fixed;
+  margin-bottom: 100px;
 }
 
 .logo a {
@@ -71,6 +73,7 @@ nav a:hover {
   padding: 0 10px;
   width: 75%;
   min-width: 950px;
+  padding-top: 50px;
 }
 
 .column {
