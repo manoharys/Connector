@@ -40,12 +40,25 @@ class Post {
 		}
 	}
 
-	public function loadPostsFriends() {
+	public function loadPostsFriends($data, $limit) {
 
-		
+		$page = $data['page']; 
+		$userLoggedIn = $this->user_obj->getUsername();
+
+		if($page == 1) 
+			$start = 0;
+		else 
+			$start = ($page - 1) * $limit;
+
+
 		$str = ""; //String to return 
 		$data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' ORDER BY id DESC");
 
+		if(mysqli_num_rows($data_query) > 0) {
+
+
+			$num_iterations = 0; //Number of results checked (not necasserily posted)
+			$count = 1;
 
 			while($row = mysqli_fetch_array($data_query)) {
 				$id = $row['id'];
@@ -68,8 +81,18 @@ class Post {
 				if($added_by_obj->isClosed()) {
 					continue;
 				}
+					if($num_iterations++ < $start)
+						continue; 
 
-				
+
+					//Once 10 posts have been loaded, break
+					if($count > $limit) {
+						break;
+					}
+					else {
+						$count++;
+					}
+
 					$user_details_query = mysqli_query($this->con, "SELECT first_name, last_name, profile_pic FROM users WHERE username='$added_by'");
 					$user_row = mysqli_fetch_array($user_details_query);
 					$first_name = $user_row['first_name'];
@@ -83,7 +106,7 @@ class Post {
 					$end_date = new DateTime($date_time_now); //Current time
 					$interval = $start_date->diff($end_date); //Difference between dates 
 					if($interval->y >= 1) {
-						if($interval->y == 1)
+						if($interval == 1)
 							$time_message = $interval->y . " year ago"; //1 year ago
 						else 
 							$time_message = $interval->y . " years ago"; //1+ year ago
@@ -160,8 +183,13 @@ class Post {
 
 			} //End while loop
 
-		
-
+			if($count > $limit) {
+				$str .= "<input type='hidden' class='nextPage' value='".($page + 1)."'>
+							<input type='hidden' class='noMorePosts' value='false'>";
+			}else{ 
+				$str .= "<input type='hidden' class='noMorePosts' value='true'><p style='text-align: center;'> No more posts to show! </p>";
+		}
+	  }
 		echo $str;
 
 

@@ -1,10 +1,10 @@
-<?php 
-  include("../../config/config.php");
-  include("../classes/User.php");
-  include("../classes/Post.php");
+<?php  
+include("../../config/config.php");
+include("../classes/User.php");
+include("../classes/Post.php");
 
-  $limit = 10; //Number of post to be loaded per call
+$limit = 6; //Number of posts to be loaded per call
 
-  $posts = new Post($con, $_REQUEST['userLoggedIn']);
-  $posts->loadPostsFriends();
+$posts = new Post($con, $_REQUEST['userLoggedIn']);
+$posts->loadPostsFriends($_REQUEST, $limit);
 ?>
