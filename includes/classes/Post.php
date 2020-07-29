@@ -81,6 +81,10 @@ class Post {
 				if($added_by_obj->isClosed()) {
 					continue;
 				}
+
+				$user_logged_obj = new User($this->con, $userLoggedIn);
+				if($user_logged_obj->isFriend($added_by)){
+
 					if($num_iterations++ < $start)
 						continue; 
 
@@ -179,17 +183,17 @@ class Post {
 
 							</div>
 							<hr>";
-				
+				}
 
 			} //End while loop
 
-			if($count > $limit) {
-				$str .= "<input type='hidden' class='nextPage' value='".($page + 1)."'>
+			if($count > $limit) 
+				$str .= "<input type='hidden' class='nextPage' value='" . ($page + 1) . "'>
 							<input type='hidden' class='noMorePosts' value='false'>";
-			}else{ 
-				$str .= "<input type='hidden' class='noMorePosts' value='true'><p style='text-align: center;'> No more posts to show! </p>";
+			else 
+				$str .= "<input type='hidden' class='noMorePosts' value='true'><p style='text-align: centre;'> No more posts to show! </p>";
 		}
-	  }
+
 		echo $str;
 
 
