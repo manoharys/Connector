@@ -21,6 +21,10 @@
         return $this->user['first_name']. " ". $this->user['last_name'];
       }
 
+      public function getProfilePic(){
+        return $this->user['profile_pic'];
+      }
+
     
   
 	public function isClosed() {
