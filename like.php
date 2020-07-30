@@ -24,17 +24,26 @@
 
     $user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username = '$user_liked'");
     $row = mysqli_fetch_array($user_details_query);
+    $total_user_likes = $row['num_likes'];
 
     //Like button
+    if(isset($_POST['like_button'])) {
+		$total_likes++;
+		$query = mysqli_query($con, "UPDATE posts SET likes='$total_likes' WHERE id='$post_id'");
+		$total_user_likes++;
+		$user_likes = mysqli_query($con, "UPDATE users SET num_likes='$total_user_likes' WHERE username='$user_liked'");
+		$insert_user = mysqli_query($con, "INSERT INTO likes VALUES('', '$userLoggedIn', '$post_id')");
 
+		//Insert Notification
+	}
     //Unlike button
 
-    //Check for previos likes
+    //Check for previous likes
 
     $check_query = mysqli_query($con, "SELECT * FROM likes WHERE username = '$userLoggedIn' AND post_id = '$post_id'");
-    $num_row = mysqli_num_row($check_query);
+    $num_row = mysqli_num_rows($check_query);
 
-    if($num_rows > 0) {
+    if($num_row > 0) {
 		echo '<form action="like.php?post_id=' . $post_id . '" method="POST">
 				<input type="submit" class="comment_like" name="unlike_button" value="Unlike">
 				<div class="like_value">
