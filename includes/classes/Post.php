@@ -203,8 +203,8 @@ class Post {
 							</div>
 							
 							<div class='newsfeedPostOptions'>
-							  comments($comments_check_num)&nbsp;&nbsp;&nbsp;
-							  <iframe src = 'like.php?post_id=$id'><iframe>
+							<span onclick = toggle$id() style='cursor:pointer'> comments($comments_check_num)&nbsp;&nbsp;&nbsp;</span>
+							  <iframe src = 'like.php?post_id=$id'  scrolling='no'><iframe>
 							</div>
 
 							<div class = 'post_comment' id='toggleComment$id' style='display:none;'>
