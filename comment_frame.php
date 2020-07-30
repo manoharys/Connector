@@ -2,6 +2,11 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<style>
+		body{
+			background-color: #faf5f5;
+           }
+	</style>
 </head>
 <body>
 
@@ -149,15 +154,16 @@
 			<div class="comment_section">
 				<a href="<?php echo $posted_by?>" target="_parent"><img src="<?php echo $user_obj->getProfilePic();?>" title="<?php echo $posted_by; ?>" style="float:left;" height="30"></a>
 				<a href="<?php echo $posted_by?>" target="_parent"> <b> <?php echo $user_obj->getFirstAndLastName(); ?> </b></a>
-				&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $time_message . "<br>" . $comment_body; ?> 
-				<hr>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class='comment_section_time_message_span'> <?php echo $time_message . "<br>" ." <span class='comment_section_commentBody_span'>" .  $comment_body; ?> </span></span> 
+				
 			</div>
+			<hr>
 			<?php
 
 		}
 	}
 	else {
-		echo "<center><br><br>No Comments to Show!</center>";
+		echo "<center style='color:#8f8d8d;'><br><br>No Comments to Show!</center>";
 	}
 
 	?>

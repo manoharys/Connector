@@ -3,8 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: #eeeeee;
+  background-color: #f5f5f5;
+  color: #666666;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 .top_bar {
@@ -17,7 +25,7 @@ body {
   display: inline-flex;
   position: relative;
   z-index: 10;
-  position:fixed;
+  position: fixed;
   margin-bottom: 100px;
 }
 
@@ -52,6 +60,7 @@ nav {
   align-items: center;
   height: 50px;
 }
+
 nav a {
   position: relative;
   color: #fff;
@@ -132,7 +141,7 @@ nav a:hover {
   height: 50px;
   border: none;
   border-radius: 5px;
-  background-color:#1894ca;
+  background-color: #1894ca;
   color: #fffbfb;
   font-family: monospace;
   text-shadow: #1894ca 0.5px 0.5px 0px;
@@ -142,48 +151,76 @@ nav a:hover {
   margin-top: 5px;
   text-transform: uppercase;
 }
-.post_form input[type="submit"]:hover{
-    columns: #d3d3d3;
+
+.post_form input[type="submit"]:hover {
+  columns: #d3d3d3;
 }
 
 .status_post {
-	width: 96%;
-	font-size: 15px;
-	padding: 0px 5px;
+  width: 96%;
+  font-size: 15px;
+  padding: 0px 5px;
   min-height: 75px;
 
 }
 
 .post_profile_pic {
-	float: left;
-	margin-right: 15px;
+  float: left;
+  margin-right: 15px;
 }
 
 .post_profile_pic img {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 
 /* comment section */
-#comment_iframe{
+#comment_iframe {
   max-height: 250px;
   width: 100%;
 }
 
-.comment_section{
-  padding: 5px 5px 15px 10px;
+.comment_section {
+ padding: 18px 6px 10px 10px;
 }
 
-.comment_section  img {
+.comment_section img {
   margin: 0 3px 3px 3px;
   border-radius: 50%;
 }
 
-#comment_form textarea{
+#comment_form textarea {
   width: 85%;
   height: 35px;
   border-radius: 5px;
   color: #575757;
   font-size: 14px;
   margin: 3px 3px 3px 5px;
+  resize: none;
+  border: 1px solid #d3d3d3;
+}
+
+#comment_form input[type='submit'] {
+  border: none;
+  border-radius: 5px;
+  background-color: #1894ca;
+  color: #fffbfb;
+  font-family: monospace;
+  text-shadow: #1894ca 0.5px 0.5px 0px;
+  font-size: 1.5rem;
+  position: absolute;
+  outline: none;
+  margin-top: 5px;
+  text-transform: uppercase;
+  padding: 3px 17px;
+  cursor: pointer;
+}
+
+.comment_section_time_message_span {
+  color: #a19c9c;
+}
+
+.comment_section_commentBody_span {
+  color: #1b1a1ab0;
+  padding: 10px 0px;
 }
