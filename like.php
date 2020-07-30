@@ -34,11 +34,24 @@
     $check_query = mysqli_query($con, "SELECT * FROM likes WHERE username = '$userLoggedIn' AND post_id = '$post_id'");
     $num_row = mysqli_num_row($check_query);
 
-    if($num_row > 0){
-        echo '';
-    }else{
-        
-    }
+    if($num_rows > 0) {
+		echo '<form action="like.php?post_id=' . $post_id . '" method="POST">
+				<input type="submit" class="comment_like" name="unlike_button" value="Unlike">
+				<div class="like_value">
+					
+				</div>
+			</form>
+		';
+	}
+	else {
+		echo '<form action="like.php?post_id=' . $post_id . '" method="POST">
+				<input type="submit" class="comment_like" name="like_button" value="Like">
+				<div class="like_value">
+				
+				</div>
+			</form>
+		';
+	}
 
 	?>
 
@@ -52,3 +65,4 @@
 
 </body>
 </html>
+ 
