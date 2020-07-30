@@ -181,7 +181,7 @@ nav a:hover {
 }
 
 .comment_section {
- padding: 18px 6px 10px 10px;
+  padding: 18px 6px 10px 10px;
 }
 
 .comment_section img {
@@ -223,4 +223,8 @@ nav a:hover {
 .comment_section_commentBody_span {
   color: #1b1a1ab0;
   padding: 10px 0px;
+}
+
+.newsfeedPostOptions {
+  color: #57a8ff;
 }
