@@ -52,6 +52,7 @@ include("includes/header.php"); //Header
 				<input type="submit" name="accept_request<?php echo $user_from; ?>" id="accept_button" value="Accept" onclick=notice()>
 				<input type="submit" name="ignore_request<?php echo $user_from; ?>" id="ignore_button" value="Ignore">
 			</form>
+            <hr>
 			<?php
 
 
