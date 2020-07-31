@@ -1,7 +1,6 @@
 <?php 
    include("includes/header.php");
-   include("includes/classes/Post.php");
-   include("includes/classes/User.php");
+
 
    $profile_pic =  $user['profile_pic'];
 

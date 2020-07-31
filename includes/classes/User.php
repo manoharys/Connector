@@ -25,7 +25,10 @@
         return $this->user['profile_pic'];
       }
 
-    
+      public function getFriendArray(){
+        return $this->user['friend_array'];
+      }
+
   
 	public function isClosed() {
 		$username = $this->user['username'];
