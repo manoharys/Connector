@@ -11,6 +11,17 @@
    }
 
 ?>
+   <style type="text/css">
+     .wrapper{
+        margin-left: 0px;
+        padding-left: 0px;
+     }
+     .profile_left{
+        height: 100vh;
+     }
+   </style>
+
+
     <div class="profile_left">
       <img src="<?php echo $profile_pic ?>" alt="profile pic">
       
