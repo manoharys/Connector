@@ -1,7 +1,7 @@
 <?php
-require_once("config/config.php");
-include("includes/classes/Post.php");
+require "config/config.php";
 include("includes/classes/User.php");
+include("includes/classes/Post.php");
 
 if(isset($_SESSION["username"])){
 
@@ -57,7 +57,7 @@ else{
             <a href="#">
                 <i class="fa fa-bell-o fa-lg" aria-hidden="true"></i>
             </a>
-            <a href="#">
+            <a href="requests.php">
                 <i class="fa fa-users fa-lg" aria-hidden="true"></i>
             </a>
             <a href="#">

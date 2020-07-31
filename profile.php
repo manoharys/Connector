@@ -23,7 +23,7 @@
    }
    
    if(isset($_POST['respond_friend'])){
-      header("Location: request.php");
+      header("Location: requests.php");
    }
 
 ?>
