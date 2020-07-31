@@ -95,9 +95,12 @@ nav a:hover {
 }
 
 .user_details {
-  width: 250px;
+  width: 350px;
   float: left;
   margin-bottom: 20px;
+  height: 200px;
+  margin-left: -100px;
+  word-break: break-all;
 }
 
 .user_details_left_right {

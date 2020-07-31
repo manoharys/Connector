@@ -48,7 +48,14 @@
          if($userLoggedIn != $username){
            if($logged_in_user_obj->isFriend($username)){
               echo '<input type="submit"  name="remove_friend" class="danger" value="Remove Friend">';
-           }else{
+           }
+           else if($logged_in_user_obj->didReceiveRequest($username)){
+              echo '<input type="submit"  name="respond_friend" class="warning" value="Respond Friend">';
+           }
+           else if($logged_in_user_obj->didSendRequest($username)){
+            echo '<input type="submit"  name="" class="default" value="Request Send">';
+           }
+           else{
               echo '<input type="submit"  name="add_friend" class="primary" value="Add Friend">';
            }
          }
