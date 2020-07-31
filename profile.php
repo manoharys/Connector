@@ -9,8 +9,22 @@
        $username = $_GET['profile_username'];
        $user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username = '$username'");
        $user_array =  mysqli_fetch_array($user_details_query);
-       $num_of_friends = substr_count($user_array['friend_array'], ',') - 1;
+       $num_of_friends = substr_count($user_array['friend_array'], ',');
        $profile_pic = $user_array['profile_pic'];
+   }
+
+   if(isset($_POST['remove_friend'])){
+      $user = new User($con, $userLoggedIn);
+      $user->removeFriend($username);
+   }
+   
+   if(isset($_POST['add_friend'])){
+      $user = new User($con, $userLoggedIn);
+      $user->sendRequest($username);
+   }
+   
+   if(isset($_POST['respond_friend'])){
+      header("Location: request.php");
    }
 
 ?>
@@ -30,11 +44,11 @@
       
       <div class="profile_info">
            <p><?php echo "Posts: ". $user_array['num_posts'];?></p>
-           <p><?php echo "Posts: ". $user_array['num_likes'];?></p>
-           <p><?php echo "Posts: ". $num_of_friends?></p>
+           <p><?php echo "Likes: ". $user_array['num_likes'];?></p>
+           <p><?php echo "Friends: ". $num_of_friends?></p>
       </div>
 
-      <form action="<?php echo $username; ?>">
+      <form action="<?php echo $username; ?>" method="POST">
         <?php 
          $profile_user_obj = new User($con, $username);
          if($profile_user_obj->isClosed()){
