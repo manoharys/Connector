@@ -56,7 +56,7 @@
             echo '<input type="submit"  name="" class="default" value="Request Send">';
            }
            else{
-              echo '<input type="submit"  name="add_friend" class="primary" value="Add Friend">';
+              echo '<input type="submit"  name="add_friend" class="success" value="Add Friend">';
            }
          }
         ?>
