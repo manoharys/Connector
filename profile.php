@@ -40,7 +40,7 @@
 
     <div class="profile_left">
       <img src="<?php echo $profile_pic ?>" alt="profile pic">
-      
+      <div class="profile_name"><?php echo $user_array['username'];?></div>
       <div class="profile_info">
            <p><?php echo "Posts: ". $user_array['num_posts'];?></p>
            <p><?php echo "Likes: ". $user_array['num_likes'];?></p>
@@ -75,9 +75,17 @@
         ?>
       </form>
       <input type="submit" class="deep_blue" data-toggle="modal" data-target="#post_form" value="Post Something">
+      
+       <?php 
+         if($userLoggedIn != $username){
+           echo '<div class="profile_info_button">';
+           echo $logged_in_user_obj->getMutualFriends($username) . " mutual friends";
+           echo '</div>';
+         }
+       ?>
 
     </div>
-   
+     
     <div class="profile_main_column main_column column">
         <div class="posts_area"></div>
         <img id="loading" src="assets/images/icons/loading.gif">

@@ -29,13 +29,17 @@ else{
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css">
+	
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bootbox.min.js"></script>
     <script src="assets/js/demo.js"></script>
+    <script src="assets/js/jquery.jcrop.js"></script>
+	<script src="assets/js/jcrop_bits.js"></script>
+
 </head>
 
 <body>
@@ -65,7 +69,7 @@ else{
             <a href="#">
                 <i class="fa fa-cog fa-lg" aria-hidden="true"></i>
             </a>
-            <a href="includes/handlers/logout.php">0
+            <a href="includes/handlers/logout.php">
                 <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
             </a>
 
