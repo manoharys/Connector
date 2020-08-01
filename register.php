@@ -16,6 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/js/register.js"></script>
 </head>
+
 <body>
   <?php 
     if(isset($_POST['submit_btn'])){
@@ -29,16 +30,33 @@
        ';
     }
   ?>
-  <div class="wrapper">
+  <div class="welcome">
+    <video autoplay muted loop id="myVideo">
+      <source src="assets/previews/welcome.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="content">
+      <img src="assets/images/icons/siteLogo.png" alt="">
+      <div class="welcome_header">
+        <span> <span id="firstLetter">C</span>ONNECTOR</span>
+        <div class="sub_heading">
+          <span>connecting the world!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="wrapper" style='display:none;'>
     <div class="register_box">
       <div class="app_header">
         <span> <span id="firstLetter">C</span>ONNECTOR</span>
         <div class="sub_heading"><span>connecting the world!</span>
         </div>
       </div>
-     
+
       <div id="first">
-      <?php 
+        <?php 
            if(in_array("Email or Password is incorrect", $error_array))
            echo "<div class = 'errorDiv'><span class='error'>Email or Password is incorrect</span></div>";
        ?>
