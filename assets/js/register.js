@@ -13,3 +13,13 @@ $(document).ready(function(){
     });
 });
 });
+
+
+//Fading welcome template div
+
+setTimeout(fade_out, 3000);
+
+function fade_out() {
+  $(".welcome").delay(2000).fadeOut(1000);;
+  $(".wrapper").show();
+}
