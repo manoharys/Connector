@@ -27,7 +27,7 @@ else{
     <title>CONNECTOR</title>
 
     <!-- favicon -->
-    <link href="assets/images/icons/siteLogo.jpg" rel="icon">
+    <link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 
     <!-- css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
