@@ -44,6 +44,19 @@ class Message {
 
         $get_message_query = mysqli_query($this->con, "SELECT * FROM messages WHERE (user_to = '$userLoggedIn' AND user_from='$otherUser') OR
                                          (user_to = '$otherUser' AND user_from='$userLoggedIn')");
+
+        while($row = mysqli_fetch_array($get_message_query)){
+            $user_to = $row['user_to'];
+            $user_from = $row['user_from'];
+            $body = $row['body'];
+
+            $div_top = ($user_to == $userLoggedIn) ? "<div class='message' id = 'green'>" : "<div class='message' id='blue'>";
+            $data = $data . $div_top .$body . "</div> <br> <br>";
+        }
+
+        return $data;
+
+
     }
 
 }
