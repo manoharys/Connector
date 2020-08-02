@@ -54,9 +54,7 @@ class Message {
             $data = $data . $div_top .$body . "</div> <br> <br>";
         }
 
-        return $data;
-
-
+        return $data;  
     }
 
 }

@@ -378,3 +378,23 @@ nav a:hover {
   font-weight: 400;
   font-size: 16px;
 }
+
+#message_textarea{
+  width: 80%;
+  padding-left: 15px;
+  border-radius: 37px;
+  padding-top: 5px;
+  /* border: none; */
+  outline: none;
+  border: 1px solid #20aae5;
+}
+
+#message_submit{
+  width: 80%;
+  padding-left: 15px;
+  border-radius: 37px;
+  padding-top: 5px;
+  /* border: none; */
+  outline: none;
+  border: 1px solid #20aae5;
+}
