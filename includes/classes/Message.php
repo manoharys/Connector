@@ -57,6 +57,30 @@ class Message {
 
         return $data;  
     }
+    
+    public function getLatestMessage($userLoggedIn, $username){}
+    
+    public function getConvos(){
+        $userLoggedIn = $this->user_obj->getUsername();
+        $return_string = "";
+        $convos = array();
+
+        $query = mysqli_query($this->con, "SELECT user_to, user_from FROM messages WHERE user_to='$userLoggedIn' OR user_from ='$userLoggedIn'");
+        
+        while($row = mysqli_fetch_array($query)){
+            $user_to_push = ($row['user_to'] != $userLoggedIn) ? $row['user_to'] : $row['user_from'];
+
+            if(!in_array($user_to_push, $convos)){
+                array_push($convos, $user_to_push);
+            }
+        }
+
+        foreach($convos as $username){
+            $user_found_obj = new User($this->con, $username);
+            $lastes_message_details = $this->getLatestMessage($userLoggedIn, $username);
+        }
+    }
+
 
 }
 
