@@ -61,15 +61,15 @@ class Message {
     public function getLatestMessage($userLoggedIn, $user2){
         $details_array = array();
 
-        $query = mysqli_query($this->con, "SELECT body, user_to FROM messages WHERE (user_to = '$userLoggedIn' AND user_from='$user2') OR 
-                            (user_from = '$userLoggedIn' AND user_to='$user2')");
+        $query = mysqli_query($this->con, "SELECT body, user_to, date FROM messages WHERE (user_to = '$userLoggedIn' AND user_from='$user2') OR 
+                            (user_from = '$userLoggedIn' AND user_to='$user2') ORDER BY id DESC");
 
         $row = mysqli_fetch_array($query);
         $sent_by = ($row['user_to'] == $userLoggedIn) ? "They said: " : "You said: ";
 
         //Timeframe
         $date_time_now = date("Y-m-d H:i:s");
-        $start_date = new DateTime($date_time); //Time of post
+        $start_date = new DateTime($row['date']); //Time of post
         $end_date = new DateTime($date_time_now); //Current time
         $interval = $start_date->diff($end_date); //Difference between dates 
         if($interval->y >= 1) {
@@ -161,7 +161,18 @@ class Message {
             $dots = (strlen($lastes_message_details[1])>= 12) ? "..." : "";
             $split = str_split($lastes_message_details[1], 12);
             $split = $split[0] . $dots;
+
+            $return_string .= "<a href='message.php?u=$username'>
+                                  <div class='user_found_message'>
+                                     <img src='". $user_found_obj->getProfilePic(). "' style='border-radius:50%; margin-right:5px; height:50px; width:50px;'>
+                                     " . $user_found_obj->getFirstAndLastName() . "
+                                     <span class='timestamp_smaller' id='grey'> " . $lastes_message_details[2] ."</span>
+                                     <p id='grey' style='margin: 0;'>" . $lastes_message_details[0] . $split . "</p>
+                                  </div>
+                                </a>";
         }
+
+           return $return_string;
        
         
 

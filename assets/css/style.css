@@ -431,3 +431,7 @@ nav a:hover {
 	overflow: scroll;
 	margin-bottom: 10px;
 }
+
+#conversations{
+   height: 400px;
+}
