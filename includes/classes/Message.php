@@ -164,7 +164,7 @@ class Message {
 
             $return_string .= "<a href='message.php?u=$username'>
                                   <div class='user_found_message'>
-                                     <img src='". $user_found_obj->getProfilePic(). "' style='border-radius:50%; margin-right:5px; height:50px; width:50px;'>
+                                     <img src='". $user_found_obj->getProfilePic(). "'>
                                      " . $user_found_obj->getFirstAndLastName() . "
                                      <span class='timestamp_smaller' id='grey'> " . $lastes_message_details[2] ."</span>
                                      <p id='grey' style='margin: 0;'>" . $lastes_message_details[0] . $split . "</p>

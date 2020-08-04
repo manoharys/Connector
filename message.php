@@ -77,7 +77,7 @@
                     echo "To: <input type='text'>";
                     echo "<div class='results'></div>";
                 }else{
-                    echo "<textarea name='message_body' id='message_textarea' class='output' placeholder='Writer you message....'></textarea>";                   
+                    echo "<textarea name='message_body' id='message_textarea' class='output' placeholder='Writer your message....'></textarea>";                   
                     echo "<input type='submit' name='post_message' class='info clear' id='message_submit' value='SEND''>";
                 }
               ?>
