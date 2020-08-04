@@ -17,7 +17,7 @@
       $user_to_obj  = new User($con, $user_to);
   }
   
-
+  
 
   if(isset($_POST['post_message'])){
       if(isset($_POST['message_body'])){
