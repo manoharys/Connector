@@ -93,7 +93,7 @@ if(isset($_POST['post_message'])) {
 
     <?php  
     if($userLoggedIn != $username) {
-      echo '<div class="profile_info_button">';
+      echo '<div class="profile_info_bottom">';
         echo $logged_in_user_obj->getMutualFriends($username) . " Mutual friends";
       echo '</div>';
     }
@@ -121,9 +121,11 @@ if(isset($_POST['post_message'])) {
 
       <div role="tabpanel" class="tab-pane fade in" id="messages_div">
         <?php  
+        
+
           echo "<h4>You and <a href='" . $username ."'>" . $profile_user_obj->getFirstAndLastName() . "</a></h4><hr><br>";
 
-          echo "<div class='loaded_messages' id='scroll_messages' style='min-height:350px;max-height:350px;'>";
+          echo "<div class='loaded_messages' id='scroll_messages'>";
             echo $message_obj->getMessages($username);
           echo "</div>";
         ?>
