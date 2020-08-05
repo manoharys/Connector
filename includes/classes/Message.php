@@ -178,6 +178,71 @@ class Message {
 
     }
 
+    public function getConvosDropdown($data, $limit) {
+
+		$page = $data['page'];
+		$userLoggedIn = $this->user_obj->getUsername();
+		$return_string = "";
+		$convos = array();
+
+		if($page == 1)
+			$start = 0;
+		else 
+			$start = ($page - 1) * $limit;
+
+		$set_viewed_query = mysqli_query($this->con, "UPDATE messages SET viewed='yes' WHERE user_to='$userLoggedIn'");
+
+		$query = mysqli_query($this->con, "SELECT user_to, user_from FROM messages WHERE user_to='$userLoggedIn' OR user_from='$userLoggedIn' ORDER BY id DESC");
+
+		while($row = mysqli_fetch_array($query)) {
+			$user_to_push = ($row['user_to'] != $userLoggedIn) ? $row['user_to'] : $row['user_from'];
+
+			if(!in_array($user_to_push, $convos)) {
+				array_push($convos, $user_to_push);
+			}
+		}
+
+		$num_iterations = 0; //Number of messages checked 
+		$count = 1; //Number of messages posted
+
+		foreach($convos as $username) {
+
+			if($num_iterations++ < $start)
+				continue;
+
+			if($count > $limit)
+				break;
+			else 
+				$count++;
+
+
+			$is_unread_query = mysqli_query($this->con, "SELECT opened FROM messages WHERE user_to='$userLoggedIn' AND user_from='$username' ORDER BY id DESC");
+			$row = mysqli_fetch_array($is_unread_query);
+			$style = ($row['opened'] == 'no') ? "background-color: #DDEDFF;" : "";
+
+
+			$user_found_obj = new User($this->con, $username);
+			$latest_message_details = $this->getLatestMessage($userLoggedIn, $username);
+
+			$dots = (strlen($latest_message_details[1]) >= 12) ? "..." : "";
+			$split = str_split($latest_message_details[1], 12);
+			$split = $split[0] . $dots; 
+
+            $return_string .= "<a href='message.php?u=$username'>
+            <div class='user_found_message'>
+               <img src='". $user_found_obj->getProfilePic(). "'>
+               " . $user_found_obj->getFirstAndLastName() . "
+               <span class='timestamp_smaller' id='grey'> " . $lastes_message_details[2] ."</span>
+               <p id='grey' style='margin: 0;'>" . $lastes_message_details[0] . $split . "</p>
+            </div>
+          </a>";
+		}
+
+
+	
+		return $return_string;
+	}
+
 
 }
 

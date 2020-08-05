@@ -10,10 +10,7 @@ if(isset($_POST['post'])){
       <form method="post" id="resetPost"></form>
       <script>$("#resetPost").submit()</script>
    <?php
-
 }
-
-
  ?>
 	<div class="user_details column">
 		<a href="<?php echo $userLoggedIn; ?>">  <img src="<?php echo $user['profile_pic']; ?>"> </a>
