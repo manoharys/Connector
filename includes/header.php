@@ -61,10 +61,10 @@ else{
                  echo $user['first_name'];
                ?>
             </a>
-            <a href="#">
+            <a href="index.php">
                 <i class="fa fa-home fa-lg" aria-hidden="true"></i>
             </a>
-            <a href="#">
+            <a href="javascript:void(0)" onclick="getDropdownData(<?php echo $userLoggedIn; ?>, 'message')">
                 <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
             </a>
             <a href="#">
@@ -82,6 +82,8 @@ else{
 
         </nav>
 
+        <div class="dropdown_data_window"></div>
+        <input type="hidden" id="dropdown_data_type" value="">
 </div>
 
 <div class="wrapper">
