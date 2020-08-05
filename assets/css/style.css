@@ -16,6 +16,7 @@ a {
 }
 
 .top_bar {
+  padding:10px;
   width: 100%;
   min-width: 1050px;
   height: 50px;
@@ -27,6 +28,7 @@ a {
   z-index: 10;
   position: fixed;
   margin-bottom: 100px;
+
 }
 
 .logo a {
@@ -429,12 +431,14 @@ nav a:hover {
 	min-height: 350px;
 	max-height: 400px;
 	overflow: scroll;
-	margin-bottom: 10px;
+  margin-bottom: 10px;
+  overflow-x: hidden;
 }
 
 #conversations{
    height: 359px;
    overflow: scroll;
+   overflow-x: hidden;
 }
 
 .loaded_conversations a{
@@ -502,4 +506,8 @@ nav a:hover {
 	margin-left: 10px;
   font-size: 12px;
   margin-bottom: 5px;
+}
+
+.tab-content{
+  margin-top: 25px;
 }
