@@ -27,28 +27,29 @@
    }
 
 ?>
-   <style type="text/css">
-     .wrapper{
-        margin-left: 0px;
-        padding-left: 0px;
-     }
-     .profile_left{
-        height: 100vh;
-     }
-   </style>
+<style type="text/css">
+  .wrapper {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  .profile_left {
+    height: 100vh;
+  }
+</style>
 
 
-    <div class="profile_left">
-      <img src="<?php echo $profile_pic ?>" alt="profile pic">
-      <div class="profile_name"><?php echo $user_array['username'];?></div>
-      <div class="profile_info">
-           <p><?php echo "Posts: ". $user_array['num_posts'];?></p>
-           <p><?php echo "Likes: ". $user_array['num_likes'];?></p>
-           <p><?php echo "Friends: ". $num_of_friends?></p>
-      </div>
+<div class="profile_left">
+  <img src="<?php echo $profile_pic ?>" alt="profile pic">
+  <div class="profile_name"><?php echo $user_array['username'];?></div>
+  <div class="profile_info">
+    <p><?php echo "Posts: ". $user_array['num_posts'];?></p>
+    <p><?php echo "Likes: ". $user_array['num_likes'];?></p>
+    <p><?php echo "Friends: ". $num_of_friends?></p>
+  </div>
 
-      <form action="<?php echo $username; ?>" method="POST">
-        <?php 
+  <form action="<?php echo $username; ?>" method="POST">
+    <?php 
          $profile_user_obj = new User($con, $username);
          if($profile_user_obj->isClosed()){
             header("Location: user_closed.php");
@@ -73,10 +74,10 @@
            }
          }
         ?>
-      </form>
-      <input type="submit" class="deep_blue" data-toggle="modal" data-target="#post_form" value="Post Something">
-      
-       <?php 
+  </form>
+  <input type="submit" class="deep_blue" data-toggle="modal" data-target="#post_form" value="Post Something">
+
+  <?php 
          if($userLoggedIn != $username){
            echo '<div class="profile_info_button">';
            echo $logged_in_user_obj->getMutualFriends($username) . " mutual friends";
@@ -84,34 +85,56 @@
          }
        ?>
 
-    </div>
-     
-    <div class="profile_main_column main_column column">
+</div>
+
+
+
+
+<div class="profile_main_column column">
+
+    <ul class="nav nav-tabs" role="tablist" id="profileTabs">
+      <li role="presentation" class="active"><a href="#newsfeed_div" aria-controls="newsfeed_div" role="tab" data-toggle="tab">Newsfeed</a></li>
+      <li role="presentation"><a href="#messages_div" aria-controls="messages_div" role="tab" data-toggle="tab">Messages</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+      <div role="tabpanel" class="tab-pane fade in active" id="newsfeed_div">
         <div class="posts_area"></div>
         <img id="loading" src="assets/images/icons/loading.gif">
-    </div>
+      </div>
 
-    <!-- Modal -->
+
+      <div role="tabpanel" class="tab-pane fade" id="messages_div">
+
+      </div>
+
+
+	</div>
+
+
+<!-- Modal -->
 <div class="modal fade" id="post_form" tabindex="-1" role="dialog" aria-labelledby="postModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
-      <h4 class="modal-title" id="postModalLabel">Post something!</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      
+        <h4 class="modal-title" id="postModalLabel">Post something!</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+
       </div>
 
       <div class="modal-body">
-      	<p>This will appear on the user's profile page and also their newsfeed for your friends to see!</p>
+        <p>This will appear on the user's profile page and also their newsfeed for your friends to see!</p>
 
-      	<form class="profile_post" action="" method="POST">
-      		<div class="form-group">
-      			<textarea class="form-control" name="post_body"></textarea>
-      			<input type="hidden" name="user_from" value="<?php echo $userLoggedIn; ?>">
-      			<input type="hidden" name="user_to" value="<?php echo $username; ?>">
-      		</div>
-      	</form>
+        <form class="profile_post" action="" method="POST">
+          <div class="form-group">
+            <textarea class="form-control" name="post_body"></textarea>
+            <input type="hidden" name="user_from" value="<?php echo $userLoggedIn; ?>">
+            <input type="hidden" name="user_to" value="<?php echo $username; ?>">
+          </div>
+        </form>
       </div>
 
 
@@ -123,13 +146,13 @@
   </div>
 </div>
 
-   
-   
+
+
 <script>
   var userLoggedIn = '<?php echo $userLoggedIn; ?>';
   var profileUsername = '<?php echo $username; ?>';
 
-  $(document).ready(function() {
+  $(document).ready(function () {
 
     $('#loading').show();
 
@@ -138,30 +161,31 @@
       url: "includes/handlers/ajax_load_profile_posts.php",
       type: "POST",
       data: "page=1&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
-      cache:false,
+      cache: false,
 
-      success: function(data) {
+      success: function (data) {
         $('#loading').hide();
         $('.posts_area').html(data);
       }
     });
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       var height = $('.posts_area').height(); //Div containing posts
       var scroll_top = $(this).scrollTop();
       var page = $('.posts_area').find('.nextPage').val();
       var noMorePosts = $('.posts_area').find('.noMorePosts').val();
 
-      if ((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) && noMorePosts == 'false') {
+      if ((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) && noMorePosts ==
+        'false') {
         $('#loading').show();
 
         var ajaxReq = $.ajax({
           url: "includes/handlers/ajax_load_profile_posts.php",
           type: "POST",
           data: "page=" + page + "&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
-          cache:false,
+          cache: false,
 
-          success: function(response) {
+          success: function (response) {
             $('.posts_area').find('.nextPage').remove(); //Removes current .nextpage 
             $('.posts_area').find('.noMorePosts').remove(); //Removes current .nextpage 
 
@@ -178,11 +202,11 @@
 
 
   });
-
-  </script>
- 
+</script>
 
 
-  </div>
+
+</div>
 </body>
+
 </html>
