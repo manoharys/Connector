@@ -44,7 +44,7 @@ function getDropdownData(user, type){
 		}
 
 		let ajaxreq = $.ajax({
-			url: "include/handlers/" + pageName,
+			url: "includes/handlers/" + pageName,
 			type: "POST",
 			data: "page=1&userLoggedIn=" + user,
 			cache: false,
@@ -62,3 +62,4 @@ function getDropdownData(user, type){
 	}
 
 }
+
