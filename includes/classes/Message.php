@@ -216,9 +216,11 @@ class Message {
 				$count++;
 
 
-			$is_unread_query = mysqli_query($this->con, "SELECT opened FROM messages WHERE user_to='$userLoggedIn' AND user_from='$username' ORDER BY id DESC");
-			$rows = mysqli_fetch_array($is_unread_query);
-			$style = ($rows['opened'] == 'no') ? "background-color: #DDEDFF;" : "";
+			$is_unread_query = mysqli_query($this->con, "SELECT opened FROM messages WHERE user_to='$userLoggedIn' or user_from='$userLoggedIn' ORDER BY id DESC");
+			$row = mysqli_fetch_array($is_unread_query);
+            $style = ($row['opened'] == 'no') ? "background-color: #DDEDFF;" : "";
+         
+
 
 			$user_found_obj = new User($this->con, $username);
 			$latest_message_details = $this->getLatestMessage($userLoggedIn, $username);
@@ -246,6 +248,7 @@ class Message {
 
 		return $return_string;
 	}
+
 
 
 }

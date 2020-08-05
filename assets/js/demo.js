@@ -51,14 +51,14 @@ function getDropdownData(user, type){
 
 			success: function(response){
 				$(".dropdown_data_window").html(response);
-				$(".dropdown_data_window").css({"padding" : "0px", "height" : "280px"});
+				$(".dropdown_data_window").css({"padding" : "0px", "height" : "280px" , "border" : "1px solid #DADADA"});
 				$("#dropdown_data_type").val(type);
 			}
 		});
 	}
 	else{
 		$(".dropdown_data_window").html("");
-		$(".dropdown_data_window").css({"padding" : "0px", "height" : "0px"});
+		$(".dropdown_data_window").css({"padding" : "0px", "height" : "0px", "border" : "none"});
 	}
 
 }
