@@ -16,7 +16,7 @@ a {
 }
 
 .top_bar {
-  padding:10px;
+  padding: 10px;
   width: 100%;
   min-width: 1050px;
   height: 50px;
@@ -285,7 +285,7 @@ nav a:hover {
   border-right: 10px solid #83d6fe;
   color: #cbeaf8;
   margin-right: 20px;
-  
+
 }
 
 .profile_left img {
@@ -313,18 +313,23 @@ nav a:hover {
 .danger {
   background-color: #e74c3c;
 }
+
 .warning {
   background-color: #f0ad4e;
 }
+
 .default {
   background-color: #bdc3c7;
 }
+
 .success {
   background-color: #2ecc71;
 }
+
 .info {
   background-color: #3498db;
 }
+
 .deep_blue {
   background-color: #0043f0;
 }
@@ -347,6 +352,7 @@ nav a:hover {
   color: #fff;
   background-color: #2ecc71;
 }
+
 #ignore_button {
   width: 20%;
   height: 28px;
@@ -381,7 +387,7 @@ nav a:hover {
   font-size: 16px;
 }
 
-#message_textarea{
+#message_textarea {
   width: 80%;
   padding-left: 15px;
   border-radius: 37px;
@@ -391,7 +397,7 @@ nav a:hover {
   border: 1px solid #20aae5;
 }
 
-#message_submit{
+#message_submit {
   height: 40px;
   width: 115px;
   border: none;
@@ -404,57 +410,58 @@ nav a:hover {
 }
 
 .message {
-	border: 1px solid #000;
-	border-radius: 20px;
-	padding: 5px 10px;
-	display: inline-block;
-	color: #fff;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #fff;
 }
 
 
 .message#blue {
-	background-color: #3498db;
-	border-color: #2980b9;
-	float: right;
+  background-color: #3498db;
+  border-color: #2980b9;
+  float: right;
   margin-bottom: 5px;
   margin-right: 16px;
 }
+
 .message#green {
-	background-color: #2ecc71;
-	border-color: #27ae60;
-	float: left;
-	margin-bottom: 5px;
+  background-color: #2ecc71;
+  border-color: #27ae60;
+  float: left;
+  margin-bottom: 5px;
 }
 
 .loaded_messages {
-	height: 65%;
-	min-height: 350px;
-	max-height: 400px;
-	overflow: scroll;
+  height: 65%;
+  min-height: 350px;
+  max-height: 400px;
+  overflow: scroll;
   margin-bottom: 10px;
   overflow-x: hidden;
 }
 
-#conversations{
-   height: 359px;
-   overflow: scroll;
-   overflow-x: hidden;
+#conversations {
+  height: 359px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
-.loaded_conversations a{
+.loaded_conversations a {
   text-decoration: none;
 }
 
-.loaded_conversation{
+.loaded_conversation {
   overflow: scroll;
 }
 
-.user_found_message{
+.user_found_message {
   border-bottom: 1px solid #d3d3d3;
   padding: 8px 8px 10px 8px;
 }
 
-.user_found_message:hover{
+.user_found_message:hover {
   background-color: #d3d3d3;
 }
 
@@ -466,49 +473,53 @@ nav a:hover {
   margin-right: 5px;
 }
 
-#grey{
+#grey {
   color: #8c8c8c
 }
-.user_found_message p{
-  padding:10px;
+
+.user_found_message p {
+  padding: 10px;
 }
 
-.user_found_message span{
+.user_found_message span {
   margin-left: 25px;
   overflow: hidden;
 }
 
 .resultDisplay {
-	padding: 5px 5px 0 5px;
-	height: 80px;
-	border-bottom: 1px solid #D3D3D3;
+  padding: 5px 5px 0 5px;
+  height: 80px;
+  border-bottom: 1px solid #D3D3D3;
 }
+
 .resultDisplay a {
-	float: none;
+  float: none;
 }
+
 .resultDisplay:hover {
-	background-color: #EBEBEB;
-	text-decoration: none;
+  background-color: #EBEBEB;
+  text-decoration: none;
 }
+
 .liveSearchProfilePic img {
-	height: 50px;
-	border-radius: 25px;
-	margin: 1px 12px 0 2px;
-	float: left;
+  height: 50px;
+  border-radius: 25px;
+  margin: 1px 12px 0 2px;
+  float: left;
 }
 
 .liveSearchText {
-	background-color: transparent;
-	color: #1E96CA;
+  background-color: transparent;
+  color: #1E96CA;
 }
 
-.liveSearchText p{
-	margin-left: 10px;
+.liveSearchText p {
+  margin-left: 10px;
   font-size: 12px;
   margin-bottom: 5px;
 }
 
-.tab-content{
+.tab-content {
   margin-top: 25px;
 }
 
@@ -519,7 +530,16 @@ nav a:hover {
   border-top: none;
   width: 300px;
   position: absolute;
-  right: 10px;
-  top: 40px;
+  right: 25px;
+  top: 50px;
   overflow: scroll;
+}
+
+.user_found_messages img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.user_found_messages:hover{
+  background-color: rgb(255, 255, 255);
 }

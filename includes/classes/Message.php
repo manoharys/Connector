@@ -216,10 +216,9 @@ class Message {
 				$count++;
 
 
-			$is_unread_query = mysqli_query($this->con, "SELECT opened FROM messages WHERE user_to='$userLoggedIn' or user_from='$userLoggedIn' ORDER BY id DESC");
+			$is_unread_query = mysqli_query($this->con, "SELECT opened FROM messages WHERE user_to='$userLoggedIn' AND user_from='$username' ORDER BY id DESC");
 			$row = mysqli_fetch_array($is_unread_query);
-            $style = ($row['opened'] == 'no') ? "background-color: #DDEDFF;" : "";
-         
+			$style = ($row['opened'] == 'no') ? "background-color: #DDEDFF;" : "";
 
 
 			$user_found_obj = new User($this->con, $username);
@@ -229,7 +228,7 @@ class Message {
 			$split = str_split($latest_message_details[1], 12);
 			$split = $split[0] . $dots; 
 
-			$return_string .= "<a href='messages.php?u=$username'> 
+			$return_string .= "<a href='message.php?u=$username' style='text-decoration:none;'> 
 								<div class='user_found_messages' style='" . $style . "'>
 								<img src='" . $user_found_obj->getProfilePic() . "' style='border-radius: 5px; margin-right: 5px;'>
 								" . $user_found_obj->getFirstAndLastName() . "
@@ -248,7 +247,6 @@ class Message {
 
 		return $return_string;
 	}
-
 
 
 }
