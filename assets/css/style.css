@@ -543,3 +543,19 @@ nav a:hover {
 .user_found_messages:hover{
   background-color: rgb(255, 255, 255);
 }
+
+.notification_badge {
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	background-color: #F00;
+	border-radius: 50%;
+	position: absolute;
+	left: 8px;
+	top: -5px;
+}
