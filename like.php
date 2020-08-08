@@ -60,7 +60,7 @@
 		//Insert Notification
 
 		if($user_liked != $userLoggedIn){
-			$notification = new Notification($this->con, $userLoggedIn);
+			$notification = new Notification($con, $userLoggedIn);
 			$notification->insertNotification($returned_id, $user_to, "like");
 		}
 	}
