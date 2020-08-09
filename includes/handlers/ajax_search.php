@@ -20,7 +20,7 @@
     $usersReturnedQuery = mysqli_query($con, "SELECT * FROM users WHERE (first_name LIKE '$names[0]%' OR last_name LIKE '$names[0]%') AND user_closed='no' LIMIT 8");
   }
 
-  
+
   if($query != ""){
 
 	while($row = mysqli_fetch_array($usersReturnedQuery)) {
@@ -29,7 +29,7 @@
 		if($row['username'] != $userLoggedIn)
 			$mutual_friends = $user->getMutualFriends($row['username']) . " friends in common";
 		else 
-			$mutual_friends == "";
+			$mutual_friends = "";
 
 		echo "<div class='resultDisplay'>
 				<a href='" . $row['username'] . "' style='color: #1485BD'>
