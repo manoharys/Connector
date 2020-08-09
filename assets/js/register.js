@@ -17,9 +17,10 @@ $(document).ready(function(){
 
 //Fading welcome template div
 
-setTimeout(fade_out, 3000);
+
+setTimeout(fade_out, 1000);
 
 function fade_out() {
-  $(".welcome").delay(2000).fadeOut(1000);;
-  $(".wrapper").show();
+  $(".wrapper").slideDown( "slow" );
 }
+    

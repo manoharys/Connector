@@ -47,7 +47,7 @@
   </div>
 
 
-  <div class="wrapper" style='display:none;'>
+  <div class="wrapper" style="display:none;">
     <div class="register_box">
       <div class="app_header">
         <span> <span id="firstLetter">C</span>ONNECTOR</span>
