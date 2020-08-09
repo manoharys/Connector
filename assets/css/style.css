@@ -599,7 +599,8 @@ nav a:hover {
 }
 
 .search{
-  margin: 8px 0 0 15%;
+  margin: 3px 0 0 15%;
+  
 }
 
 .search #search_text_input{
@@ -610,6 +611,9 @@ nav a:hover {
   width: 100px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding:10px;
 }
 
 .button_holder{
@@ -620,11 +624,12 @@ nav a:hover {
   height: 23px;
   text-align: center;
   width: 50px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .button_holder img{
   margin-top: 1px;
-  width: 20px
+  width: 20px;
+  outline:none;
 }

@@ -1,5 +1,26 @@
 $(document).ready(function() {
 
+    $('#search_text_input').focus(function(){
+		//Avoids if the screenWidth is small
+       if(window.matchMedia( "(min-width: 800px)" ).matches) {
+		   $(this).animate({width: '250px'}, 500);
+	   }
+	});
+	
+    $('#search_text_input').focusout(function(){
+		//Avoids if the screenWidth is small
+       if(window.matchMedia( "(min-width: 800px)" ).matches) {
+		   $(this).animate({width: '100px'}, 500);
+	   }
+	});
+
+	$("#search_text_input")
+	
+	$('.button_holder').on('click', function() {
+		document.search_form.submit();
+	});
+
+
 	//Button for profile post
 	$('#submit_profile_post').click(function(){
 		
