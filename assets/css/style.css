@@ -548,7 +548,7 @@ nav a:hover {
   border-top: none;
   width: 300px;
   position: absolute;
-  right: 5px;
+  right: 100px;
   top: 50px;
   overflow: scroll;
   overflow-x: hidden;
