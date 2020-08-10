@@ -53,7 +53,17 @@
             $mutual_friend = "";
 
             if($user['username'] != $row['username']){
-                
+                //Generate button depending on friendship status
+                if($user_obj->isFriend($row['username']))
+                   $button = "<input type='submit' name'" . $row['username'] . "'class='danger' value='Remove Friend'>";
+                else if($user_obj->didReceiveRequest($row['username']))
+                   $button = "<input type='submit' name'" . $row['username'] . "'class='warning' value='Respond to request'>";    
+                else if($user_obj->didSendRequest($row['username']))
+                   $button = "<input class='default' value='Request Sent'>";
+                else 
+                   $button = "<input type='submit' name='" . $row['username'] . "' class='success' value='Add Friend'>";
+
+                $mutual_friend = $user_obj->getMutualFriends($row['username']) . " friends in common";   
             }
         }
     ?>
