@@ -50,7 +50,7 @@
             $user_obj = new User($con, $user['username']);
 
             $button = "";
-            $mutual_friend = "";
+            $mutual_friends = "";
 
             if($user['username'] != $row['username']){
                 //Generate button depending on friendship status
@@ -63,8 +63,31 @@
                 else 
                    $button = "<input type='submit' name='" . $row['username'] . "' class='success' value='Add Friend'>";
 
-                $mutual_friend = $user_obj->getMutualFriends($row['username']) . " friends in common";   
+                $mutual_friends = $user_obj->getMutualFriends($row['username']) . " friends in common";   
             }
+
+            echo "<div class='search_result'>
+            <div class='searchPageFriendButtons'>
+                <form action='' method='POST'>
+                    " . $button . "
+                    <br>
+                </form>
+            </div>
+
+
+            <div class='result_profile_pic'>
+                <a href='" . $row['username'] ."'><img src='". $row['profile_pic'] ."' style='height: 100px;'></a>
+            </div>
+
+                <a href='" . $row['username'] ."'> " . $row['first_name'] . " " . $row['last_name'] . "
+                <p id='grey'> " . $row['username'] ."</p>
+                </a>
+                <br>
+                " . $mutual_friends ."<br>
+
+        </div>
+        <hr id='search_hr'>";
+
         }
     ?>
 </div>
