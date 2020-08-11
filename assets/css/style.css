@@ -657,3 +657,35 @@ nav a:hover {
 .search_results_footer a {
 	color: #fff;
 }
+
+
+.search_result {
+	padding: 10px;
+    height: 100px;
+}
+
+.searchPageFriendButtons {
+	float: right;
+}
+
+.searchPageFriendButtons input[type="submit"] {
+	border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.result_profile_pic {
+  	float: left;
+    margin-right: 10px;
+}
+
+.result_profile_pic img {
+  border-radius: 50%;
+}
+
+#search_hr {
+	margin-bottom: 0px;
+}
+
+

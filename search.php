@@ -44,7 +44,7 @@
             echo mysqli_num_rows($usersReturnedQuery) . " results found: <br> <br>";
         }
         echo "<p id='grey'>Try searching for: </p>";
-        echo "<a href='search.php?q=" . $query . "&type=name'>Names</a>, <a href='search.php?q=" . $query . "&type=username'>Usernames</a><br><br><hr>";
+        echo "<a href='search.php?q=" . $query . "&type=name'>Names</a>, <a href='search.php?q=" . $query . "&type=username'>Usernames</a><br><br><hr id='search_hr'>";
 
         while($row = mysqli_fetch_array($usersReturnedQuery)){
             $user_obj = new User($con, $user['username']);
