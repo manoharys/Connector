@@ -2,7 +2,7 @@
   include("includes/header.php");
 
   if(isset($_POST["cancel"])){
-      header("Location: setting.php");
+      header("Location: settings.php");
   }
 
   if(isset($_POST['close_account'])){
@@ -20,7 +20,7 @@
   You can re-open your account at any time by simply logging in. <br><br>
   
   <form action="close_account.php" method="POST">
-     <input type="submit" name="close_account" id="close_account" value="Yes! Close it!">
-     <input type="submit" name="cancel" id="update_details" value="No way!">
+     <input type="submit" name="close_account" id="close_account" value="Yes! Close it!" class="danger settings_submit">
+     <input type="submit" name="cancel" id="update_details" value="No way!" class="info settings_submit">
   </form>
 </div>
