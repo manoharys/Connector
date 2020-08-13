@@ -21,7 +21,14 @@ class Post {
 			foreach($body_array as $key => $value){
 
 				if(strpos($value, "www.youtube.com/watch?v=") !== false){
-					$value = preg_replace("!watch\?v=!", "embed/", $value);
+					
+					//https://www.youtube.com/watch?v=hEgO047GxaQ&
+					//list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3&
+					//index=2
+					
+					$link = preg_split("!&!", $value);
+
+					$value = preg_replace("!watch\?v=!", "embed/", $link[0]);
 					$value = "<br><iframe width=\'420\' height=\'315\' src=\'" . $value . "\' ></iframe><br>";
 					$body_array[$key] = $value;
 				}
