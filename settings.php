@@ -27,15 +27,18 @@
        First Name: <input type="text" name="email" value="<?php echo $email;?>"><br>
 
        <?php echo $message; ?>
-       
+
        <input type="submit" name="update_details" id="save_details" value="Update details">
     </form>
     
     <h4>Change Password</h4>
     <form action="settings.php" method="POST">
       Old password: <input type="password" name="old_password" ><br>
-      New password: <input type="password" name="new_password"><br>
+      New password: <input type="password" name="new_password_1"><br>
       New password again: <input type="password" name="new_password_2"><br>
+      
+      <?php echo $password_message; ?>
+
       <input type="submit" name="update_password" id="save_details" value="Update Password">
     </form>
 
