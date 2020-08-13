@@ -12,11 +12,22 @@
     <a href="upload.php">Upload new profile picture</a><br><br><br>
 
     <h4>Modify the values and click 'Update Details'</h5>
+    <?php 
+      $user_data_query = mysqli_query($con, "SELECT first_name, last_name, email FROM users WHERE username='$userLoggedIn'");
+      $row = mysqli_fetch_array($user_data_query);
+
+      $first_name  = $row['first_name'];
+      $last_name = $row['last_name'];
+      $email = $row['email'];
+    ?>
 
     <form action="settings.php" method="POST">
-       First Name: <input type="text" name="first_name" value="<?php echo $user['first_name'];?>"><br>
-       First Name: <input type="text" name="last_name" value="<?php echo $user['last_name'];?>"><br>
-       First Name: <input type="text" name="email" value="<?php echo $user['email'];?>"><br>
+       First Name: <input type="text" name="first_name" value="<?php echo $first_name;?>"><br>
+       First Name: <input type="text" name="last_name" value="<?php echo $last_name;?>"><br>
+       First Name: <input type="text" name="email" value="<?php echo $email;?>"><br>
+
+       <?php echo $message; ?>
+       
        <input type="submit" name="update_details" id="save_details" value="Update details">
     </form>
     
