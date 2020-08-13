@@ -115,7 +115,7 @@ nav a:hover {
   border-radius: 8px;
   box-shadow: 2px 2px 1px #d3d3d3;
   z-index: -1;
-  color:#555;
+  color:#555; 
 }
 
 .user_details {
@@ -713,5 +713,10 @@ nav a:hover {
     color: #fff;
 }
 
-
+#post_body iframe{
+  width: 580px !important;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
 
