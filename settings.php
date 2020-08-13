@@ -43,7 +43,7 @@
     </form>
 
      <h4>Close Account</h4>
-     <form action="setting.php">
+     <form action="settings.php" method="POST">
          <input type="submit" name="close_account" id="close_account" value="Close Account">
      </form>
 </div>
