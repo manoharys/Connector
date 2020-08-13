@@ -20,11 +20,11 @@ a {
   width: 0.8em;
   border-top-right-radius: 10px;
 }
- 
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background-color: rgb(32 170 229);
   outline: 1px solid rgb(32 170 229);
@@ -115,7 +115,7 @@ nav a:hover {
   border-radius: 8px;
   box-shadow: 2px 2px 1px #d3d3d3;
   z-index: -1;
-  color:#555; 
+  color: #555;
 }
 
 .user_details {
@@ -561,52 +561,52 @@ nav a:hover {
   border-radius: 50%;
 }
 
-.user_found_messages:hover{
+.user_found_messages:hover {
   background-color: rgb(255, 255, 255);
 }
 
 .notification_badge {
-	padding: 3px 7px;
-	font-size: 12px;
-	font-weight: 700;
-	line-height: 1;
-	color: #fff;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: baseline;
-	background-color: #F00;
-	border-radius: 50%;
-	position: absolute;
-	left: 8px;
-	top: -5px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #F00;
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  top: -5px;
 }
 
 
 .resultDisplayNotification {
-	height: auto;
-    color: #1485BD;
-    padding-bottom: 7px;
+  height: auto;
+  color: #1485BD;
+  padding-bottom: 7px;
 }
 
 .resultDisplayNotification img {
-    height: 40px;
-    border-radius: 5px;
-    margin: 1px 12px 0px 2px;
-    float: left;
+  height: 40px;
+  border-radius: 5px;
+  margin: 1px 12px 0px 2px;
+  float: left;
 }
 
 .timestamp_smaller {
-	font-size: 85%;
-	margin: 0;
+  font-size: 85%;
+  margin: 0;
 }
 
-.search{
+.search {
   margin: 3px 0 0 15%;
-  
+
 }
 
-.search #search_text_input{
-  border: thin solid #E5E5E5; 
+.search #search_text_input {
+  border: thin solid #E5E5E5;
   float: left;
   height: 23px;
   outline: 0;
@@ -615,10 +615,10 @@ nav a:hover {
   border-bottom-right-radius: 0;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding:10px;
+  padding: 10px;
 }
 
-.button_holder{
+.button_holder {
   background-color: #F1F1F1;
   border: thin solid #e5e5e5;
   cursor: pointer;
@@ -630,55 +630,55 @@ nav a:hover {
   border-bottom-right-radius: 10px;
 }
 
-.button_holder img{
+.button_holder img {
   margin-top: 1px;
   width: 20px;
-  outline:none;
+  outline: none;
 }
 
 
 
 .search_results {
-	background-color: #fff;
-    border: 1px solid #DADADA;
-    border-bottom: none;
-    border-top: none;
-    margin-top: 21px;
+  background-color: #fff;
+  border: 1px solid #DADADA;
+  border-bottom: none;
+  border-top: none;
+  margin-top: 21px;
 }
 
-.search_results_footer{
-	padding: 7px 4px 0px 4px;
-    height: 30px;
-    border: 1px solid #DADADA;
-    border-top: none;
-    background-color: #20AAE5;
-    text-align: center;
+.search_results_footer {
+  padding: 7px 4px 0px 4px;
+  height: 30px;
+  border: 1px solid #DADADA;
+  border-top: none;
+  background-color: #20AAE5;
+  text-align: center;
 }
 
 .search_results_footer a {
-	color: #fff;
+  color: #fff;
 }
 
 
 .search_result {
-	padding: 10px;
-    height: 100px;
+  padding: 10px;
+  height: 100px;
 }
 
 .searchPageFriendButtons {
-	float: right;
+  float: right;
 }
 
 .searchPageFriendButtons input[type="submit"] {
-	border: none;
-    padding: 7px 12px;
-    border-radius: 5px;
-    color: #fff;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  color: #fff;
 }
 
 .result_profile_pic {
-  	float: left;
-    margin-right: 10px;
+  float: left;
+  margin-right: 10px;
 }
 
 .result_profile_pic img {
@@ -686,37 +686,45 @@ nav a:hover {
 }
 
 #search_hr {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .small_profile_pic {
-   	height: 75px;
-    margin: 1px 12px 0 2px;
-    float: left;
-    border-radius: 50%;
+  height: 75px;
+  margin: 1px 12px 0 2px;
+  float: left;
+  border-radius: 50%;
 }
 
 #settings_input {
-	border: 1px solid #ccc;
-    height: 20px;
-    padding: 4px 6px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 20px;
+  border: 1px solid #ccc;
+  height: 20px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .settings_submit {
-	border: none;
-    padding: 7px 12px;
-    border-radius: 5px;
-    color: #fff;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  color: #fff;
 }
 
-#post_body iframe{
+#post_body iframe {
   width: 580px !important;
   border-radius: 20px;
   margin-top: 20px;
   margin-left: 10px;
 }
 
+.trends_column {
+  height: 430px;
+}
+
+.trends {
+  margin-left: 45px;
+  letter-spacing: 1px;
+}
