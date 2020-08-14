@@ -165,6 +165,7 @@ public function calculateTrend($term) {
 				$body = $row['body'];
 				$added_by = $row['added_by'];
 				$date_time = $row['date_added'];
+				$imagePath = $row['image'];
 
 				//Prepare user_to string so it can be included even if not posted to a user
 				if($row['user_to'] == "none") {
@@ -294,6 +295,15 @@ public function calculateTrend($term) {
 						}
 					}
 
+					if($imagePath != "") {
+						$imageDiv = "<div class='postedImage'>
+										<img src='$imagePath'>
+									</div>";
+					}
+					else{
+						$imageDiv = "";
+					}
+
 					$str .= "<div class='status_post' onClick='javascript:toggle$id()'>
 								<div class='post_profile_pic'>
 									<img src='$profile_pic' width='50'>
@@ -306,6 +316,7 @@ public function calculateTrend($term) {
 								<div id='post_body'>
 									$body
 									<br>
+									$imageDiv
 								</div>
 							</div>
 							
