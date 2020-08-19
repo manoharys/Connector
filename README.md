@@ -32,19 +32,35 @@ Connector is social network site which includes the standard features like:-
 
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p9.JPG">
 
+--- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p8.JPG">
+
+--- 
 
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p7.JPG">
 
+--- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p4.JPG">
+
+--- 
 
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p1.JPG">
 
+--- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p3.JPG">
+
+--- 
 
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p2.JPG">
 
+--- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/message.gif">
+
+--- 
 
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/home.gif">
 
