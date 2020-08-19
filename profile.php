@@ -93,7 +93,7 @@ if(isset($_POST['post_message'])) {
 
     <?php  
     if($userLoggedIn != $username) {
-      echo '<div class="profile_info_bottom">';
+      echo '<div class="profile_info_button">';
         echo $logged_in_user_obj->getMutualFriends($username) . " Mutual friends";
       echo '</div>';
     }
