@@ -6,6 +6,7 @@
 ### Table of Contents
 
 - [Description](#description)
+- [Preview](#preview)
 - [How To Use](#how-to-use)
 - [Requirements](#requirements)
 - [License](#license)
@@ -27,6 +28,23 @@ Connector is social network site which includes the standard features like:-
    - and <strong>much</strong> more!
    
 ---   
+## preview
+
+<img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p8.JPG">
+
+<img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p7.JPG">
+
+<img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p4.JPG">
+
+<img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p1.JPG">
+
+<img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p3.JPG">
+
+<img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p2.JPG">
+
+[Back To The Top](#connector)
+
+---
 
 #### Technologies
 
