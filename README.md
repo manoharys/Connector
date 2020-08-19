@@ -1,5 +1,5 @@
 # Connector
-   #### social networking website like Facebook or Twitter using JavaScript, PHP, MySql 
+   #### social networking website like Facebook and Twitter using JavaScript, PHP, MySql 
    
 ---
 
@@ -31,22 +31,21 @@ Connector is social network site which includes the standard features like:-
 ## preview
 
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p9.JPG">
---- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p8.JPG">
---- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p7.JPG">
---- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p4.JPG">
---- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p1.JPG">
---- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p3.JPG">
---- 
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/p2.JPG">
 
----
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/message.gif">
----
+
 <img src="https://github.com/manoharys/Connector/blob/master/assets/previews/home.gif">
 
 [Back To The Top](#connector)
