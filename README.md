@@ -1,6 +1,6 @@
 # Connector
    #### social networking website like Facebook and Twitter using JavaScript, PHP, MySql 
-   ###### <a href="connector.epizy.com">visit connector</a> 
+   ###### <a href="http://connector.epizy.com/">visit connector</a> 
 ---
 
 ### Table of Contents
